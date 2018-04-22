@@ -10,14 +10,22 @@ def index(request):
     return HttpResponse(template.render(context, request))
 
 
-def detail(request, stylist_id):
+def stylist(request, stylist_id):
+    """
+    Returns stylist name based on primary key sent in
+    & raises error if stylist doesn't exist
+    """
     try:
         stylist_name = Stylist.objects.get(pk=stylist_id)
     except Stylist.DoesNotExist:
         raise Http404("Stylist does not exist")
-    return render(request, 'landing/detail.html', {'stylist': stylist_name})
+    return render(request, 'landing/stylist.html', {'stylist': stylist_name})
 
 
 def name(request):
+    """
+    :param request: name
+    :return: list of stylists in database
+    """
     name_styl = Stylist.objects.order_by('-joined_date')
     return HttpResponse(name_styl)
