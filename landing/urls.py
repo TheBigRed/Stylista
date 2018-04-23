@@ -11,4 +11,5 @@ urlpatterns = [
     # /landing/name ''' Displays name of all clients in database '''
     path('name/', views.name, name='name'),
     path('signup/', views.signup, name='signup'),
+    path('thankyou/', views.thankyou, name='thankyou'),
 ]
