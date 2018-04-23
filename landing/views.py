@@ -3,7 +3,7 @@ from django.template import loader
 from django.shortcuts import render
 from .models import Stylist
 from datetime import datetime
-from django.utils import formats
+from django.urls import reverse
 
 
 def index(request):
@@ -41,10 +41,10 @@ def signup(request):
     return render(request, 'landing/signup.html')
 
 
-def thankyou(request):
+def newuser(request):
     """
     :param request: receive form data
-    :return: thank you for signing up page
+    :return: redirect to thank you page
     """
     try:
         firstname = request.POST['firstname']
@@ -60,6 +60,15 @@ def thankyou(request):
         new_stylist.last_name = lastname
         new_stylist.email = email
         new_stylist.password = password
-        new_stylist.joined_date = formats.date_format(datetime.now(), " DATETIME_FORMAT")
-        new_stylist.save()
-        return HttpResponseRedirect('landing/thankyou.html', {'fullname': fullname})
+        new_stylist.joined_date = datetime.now()
+        #new_stylist.save()
+        #return HttpResponseRedirect('landing:thankyou', args=(fullname,))
+        return HttpResponseRedirect(reverse('landing:thankyou', args=(fullname,)))
+
+
+def thankyou(request, fullname):
+    """
+    :param request: get full name of user who signed up
+    :return: thank you for signing up page
+    """
+    return render(request, 'landing/thankyou.html', {'fullname': fullname})
