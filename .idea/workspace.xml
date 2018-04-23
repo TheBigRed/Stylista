@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0ab90ae-b7e9-480a-91f5-25ae9bf879a1" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/landing/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/landing/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/landing/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/landing/models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="signup.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="signup.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/landing/templates/landing/signup.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+            <state relative-caret-position="432">
+              <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -79,11 +79,11 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/landing/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="12" selection-start-column="12" selection-end-column="12" />
+            <state relative-caret-position="144">
+              <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -127,7 +127,6 @@
       <list>
         <option value="$PROJECT_DIR$/stylelista/urls.py" />
         <option value="$PROJECT_DIR$/stylelista/settings.py" />
-        <option value="$PROJECT_DIR$/landing/models.py" />
         <option value="$PROJECT_DIR$/landing/admin.py" />
         <option value="$PROJECT_DIR$/landing/templates/landing/index.html" />
         <option value="$PROJECT_DIR$/landing/templates/landing/detail.html" />
@@ -136,6 +135,7 @@
         <option value="$PROJECT_DIR$/landing/views.py" />
         <option value="$PROJECT_DIR$/landing/static/landing/styles.css" />
         <option value="$PROJECT_DIR$/landing/templates/landing/signup.html" />
+        <option value="$PROJECT_DIR$/landing/models.py" />
       </list>
     </option>
   </component>
@@ -368,13 +368,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/landing/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stylelista/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -431,8 +424,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/landing/templates/landing/signup.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+        <state relative-caret-position="432">
+          <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/landing/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
         </state>
       </provider>
     </entry>
