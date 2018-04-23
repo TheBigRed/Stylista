@@ -29,3 +29,11 @@ def name(request):
     """
     name_styl = Stylist.objects.order_by('-joined_date')
     return HttpResponse(name_styl)
+
+
+def signup(request):
+    """
+    :param request: singup
+    :return: form to signup for account
+    """
+    return render(request, 'landing/signup.html')
