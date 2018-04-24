@@ -71,3 +71,10 @@ def thankyou(request, fullname):
     :return: thank you for signing up page
     """
     return render(request, 'landing/thankyou.html', {'fullname': fullname})
+
+def about(request):
+    """
+    :param request: none
+    :return: about site page
+    """
+    return render(request, 'landing/about.html')
