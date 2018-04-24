@@ -12,5 +12,5 @@ urlpatterns = [
     path('name/', views.name, name='name'),
     path('signup/', views.signup, name='signup'),
     path('newuser/', views.newuser, name='newuser'),
-    path('thankyou/', views.thankyou, name='thankyou'),
+    path('thankyou/(?P<fullname>[\w\-]+)/$', views.thankyou, name='thankyou'),
 ]

@@ -61,8 +61,7 @@ def newuser(request):
         new_stylist.email = email
         new_stylist.password = password
         new_stylist.joined_date = datetime.now()
-        #new_stylist.save()
-        #return HttpResponseRedirect('landing:thankyou', args=(fullname,))
+        new_stylist.save()
         return HttpResponseRedirect(reverse('landing:thankyou', args=(fullname,)))
 
 
