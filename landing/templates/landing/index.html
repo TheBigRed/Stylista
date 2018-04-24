@@ -1,10 +1,37 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{% static 'landing/css/styles-index.css' %}">
+    </head>
 <body>
-    <h1>Bumboclot</h1>
+    <div class='container-fluid'>
+        <div class="row index-nav-bar">
+            <div class="col-lg-2">
+                <img class="img-fluid" src="{% static 'landing/imgs/index/logo.png' %}"/>
+            </div>
+            <div class="col-lg-5">
+            </div>
+            <div class="col-lg-5">
+                <ul class="nav nav-pills nav-fill">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">BECOME & STYLISTA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ABOUT SITE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">SIGN UP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">LOGIN</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
