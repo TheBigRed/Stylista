@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, re_path
 
 from . import views
 
@@ -13,8 +13,8 @@ urlpatterns = [
     path('signup/', views.signup, name='signup'),
     path('login/', views.login, name='login'),
     path('newuser/', views.newuser, name='newuser'),
-    path('thankyou/(?P<fullname>[\w\-]+)/$', views.thankyou, name='thankyou'),
+    path('thankyou/<fullname>/', views.thankyou, name='thankyou'),
     path('authenticate/', views.authenticate, name='authenticate'),
-    path('account/(?P<kottai>[\w\-]+)/$', views.account, name='account'),
+    path('account/<kottai>', views.account, name='account'),
     path('about/', views.about, name='about'),
 ]
