@@ -65,12 +65,44 @@ def newuser(request):
         return HttpResponseRedirect(reverse('landing:thankyou', args=(fullname,)))
 
 
+def authenticate(request):
+    """
+    :param request: receive form data login
+    :return: redirect to page main page after login
+    """
+    try:
+        email = request.POST['email']
+        password = request.POST['password']
+        kottai = 'testing'
+    except KeyError:
+        raise Http404("Please sign up")
+    else:
+        return HttpResponseRedirect(reverse('landing:account', args=(kottai,)))
+
+
+def account(request, kottai):
+    """
+    :param request: get full name of user who signed up
+    :return: thank you for signing up page
+    """
+    return render(request, 'landing/account.html', {'email': kottai})
+
+
+def login(request):
+    """
+    :param request: none
+    :return: about site page
+    """
+    return render(request, 'landing/login.html')
+
+
 def thankyou(request, fullname):
     """
     :param request: get full name of user who signed up
     :return: thank you for signing up page
     """
     return render(request, 'landing/thankyou.html', {'fullname': fullname})
+
 
 def about(request):
     """
