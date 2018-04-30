@@ -1,9 +1,11 @@
 from django.http import HttpResponse, Http404, HttpResponseRedirect
+from django.contrib.auth import authenticate
 from django.template import loader
 from django.shortcuts import render
 from .models import Stylist
 from datetime import datetime
 from django.urls import reverse
+from django.core.exceptions import ObjectDoesNotExist
 
 
 def index(request):
@@ -73,11 +75,16 @@ def authenticate(request):
     try:
         email = request.POST['email']
         password = request.POST['password']
-        kottai = 'testing'
-    except KeyError:
-        raise Http404("Please sign up")
-    else:
-        return HttpResponseRedirect(reverse('landing:account', args=(kottai,)))
+        stylista = Stylist.objects.get(email=email, password=password)
+
+        if stylista:
+            return HttpResponseRedirect(reverse('landing:account', args=(stylista,)))
+            #return HttpResponseRedirect(reverse('core:account', args=(stylista,)))
+
+    except ObjectDoesNotExist:
+        #raise Http404("Please sign up")
+        return HttpResponse("Please SIGN UP")
+
 
 
 def account(request, kottai):
