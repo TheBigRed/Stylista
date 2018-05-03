@@ -6,6 +6,7 @@ from .models import Stylist
 from datetime import datetime
 from django.urls import reverse
 from django.core.exceptions import ObjectDoesNotExist
+from core.models import Account
 
 
 def index(request):
@@ -64,6 +65,10 @@ def newuser(request):
         new_stylist.password = password
         new_stylist.joined_date = datetime.now()
         new_stylist.save()
+
+        new_account = Account.objects.create(account_holder=new_stylist)
+        new_account.save()
+
         return HttpResponseRedirect(reverse('landing:thankyou', args=(fullname,)))
 
 
