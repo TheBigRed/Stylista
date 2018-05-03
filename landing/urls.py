@@ -1,6 +1,4 @@
 from django.urls import path, re_path
-import core.views
-
 from . import views
 
 
@@ -18,5 +16,4 @@ urlpatterns = [
     path('authenticate/', views.authenticate, name='authenticate'),
     path('account/<kottai>', views.account, name='account'),
     path('about/', views.about, name='about'),
-    #path('core/account', core.views.index, name='account'),
 ]

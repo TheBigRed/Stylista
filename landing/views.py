@@ -1,7 +1,7 @@
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.contrib.auth import authenticate
 from django.template import loader
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Stylist
 from datetime import datetime
 from django.urls import reverse
@@ -76,12 +76,14 @@ def authenticate(request):
         email = request.POST['email']
         password = request.POST['password']
         stylista = Stylist.objects.get(email=email, password=password)
+        stylist = 'test stylista'
 
         if stylista:
-            return HttpResponseRedirect(reverse('landing:account', args=(stylista,)))
-            #return HttpResponseRedirect(reverse('core:account', args=(stylista,)))
+            #return HttpResponseRedirect(reverse('landing:account', args=(stylista,)))
+            return HttpResponseRedirect(reverse('core:main', args=(stylist,)))
 
     except ObjectDoesNotExist:
+        #return redirect('core:main')
         #raise Http404("Please sign up")
         return HttpResponse("Please SIGN UP")
 
