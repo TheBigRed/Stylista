@@ -5,5 +5,4 @@ from . import views
 app_name = 'core'
 urlpatterns = [
     path('main/<stylist>', views.main, name='main'),
-
 ]
