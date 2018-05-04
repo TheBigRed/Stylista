@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Shrikhand');
+@import url('https://fonts.googleapis.com/css?family=Raleway:600i');
+
+
 .bg-light{
 
     background-color: #B2DFDB !important;
@@ -7,6 +11,20 @@
 .navbar{
 
     height: 90px;
+
+}
+
+.navbar-brand{
+
+    font-family: 'Shrikhand', cursive;
+
+}
+
+#c-nav-item{
+
+    font-family: 'Shrikhand', cursive;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
 
 }
 
@@ -21,10 +39,19 @@
     background-color: white;
 }
 
-.dropdown-menu{
+#c-dropdown-menu{
 
-    left:auto !important;
-    right: 0 !important;
+    left:auto;
+    right: 0;
     top: 135%;
+    text-align: center;
+    min-width: 14rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+.dropdown-item{
+
+    padding: 0.5rem 1.5rem;
+    letter-spacing: 0.1rem;
 
 }

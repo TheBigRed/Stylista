@@ -15,15 +15,15 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto">
-                <a class="nav-item nav-link" href="#">Home</a>
-                <a class="nav-item nav-link" href="#">Favorites</a>
-                <a class="nav-item nav-link" href="#">Messages</a>
-                <a class="nav-item nav-link" href="#">Rebook</a>
+                <a id="c-nav-item" class="nav-item nav-link" href="#">Home</a>
+                <a id="c-nav-item" class="nav-item nav-link" href="#">Favorites</a>
+                <a id="c-nav-item" class="nav-item nav-link" href="#">Messages</a>
+                <a id="c-nav-item" class="nav-item nav-link" href="#">Rebook</a>
             </div>
             <div class="dropdown">
                 <div class="account-pic dropdown dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <img style="height:100%;" class="img-fluid" src="{% static 'core/imgs/main/account_icon.svg' %}"/>
-                    <div class="dropdown-menu dropdown-menu-pull-left" aria-labelledby="dropdownMenuButton">
+                    <div id="c-dropdown-menu" class="dropdown-menu dropdown-menu-pull-left" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" href="#">Edit Profile</a>
                         <a class="dropdown-item" href="#">Refer Friends</a>
                         <a class="dropdown-item" href="#">Bookings</a>
