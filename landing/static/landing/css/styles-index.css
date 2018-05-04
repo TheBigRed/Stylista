@@ -5,6 +5,8 @@ box-sizing: border-box;
 
 }
 
+a { color: inherit; }
+
 .index-nav-bar{
     with:100%;
     height : 150px;
@@ -21,5 +23,17 @@ box-sizing: border-box;
     margin-right: -25%;
     transform: translate(-50%, -50%)
 
+
+}
+
+footer{
+
+    background-color: #263238;
+
+}
+
+.footer-col{
+
+    background-color: #009688;
 
 }
