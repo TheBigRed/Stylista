@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Shrikhand');
 @import url('https://fonts.googleapis.com/css?family=Raleway:600i');
 
+*{
+
+    border: 1px solid red;
+
+}
 
 .bg-light{
 
