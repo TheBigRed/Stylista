@@ -60,3 +60,24 @@
     letter-spacing: 0.1rem;
 
 }
+
+.top-shelf{
+
+    height:150px;
+    background-color: #CFD8DC;
+
+}
+
+.top-shelf-left{
+
+    height: inherit;
+    background-color: #CFD8DC;
+
+}
+
+.primary-btns{
+
+    width:75%;
+    background-color: #26A69A;
+
+}
