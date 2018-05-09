@@ -123,4 +123,5 @@ def about(request):
     :param request: none
     :return: about site page
     """
-    return render(request, 'landing/about.html')
+    return HttpResponse("AJAX Success")
+    #return render(request, 'landing/about.html')

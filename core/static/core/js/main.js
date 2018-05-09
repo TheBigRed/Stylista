@@ -8,6 +8,42 @@ $(document).ready(function() {
          }
     });
 
-    $("#datepicker").flatpickr({});
+    $("#datepicker").flatpickr({
+
+        minDate: "today",
+        dateFormat: "m-d-Y",
+        wrap: true,
+        onChange: function(selectedDates, dateStr, instance) {
+        //...
+        },
+        onOpen: [
+            function(selectedDates, dateStr, instance){
+
+
+
+        },
+            function(selectedDates, dateStr, instance){
+
+        }
+        ],
+        onClose: function(selectedDates, dateStr, instance){
+
+            var date = this.selectedDates;
+            console.log(date);
+            serializeData = { ListID: '1', ItemName: 'test' };
+
+            $.ajax({
+                url: "/landing/about/",
+                type: "get",
+                data: serializeData,
+                success: function(response) {
+                    $("#ajax-response").html(response);
+                }
+
+            });
+
+        }
+
+    });
 
 });

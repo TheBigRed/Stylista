@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Shrikhand');
 @import url('https://fonts.googleapis.com/css?family=Raleway:600i');
-/*
+
 *{
 
     border: 1px solid red;
 
 }
-*/
+
 h1, h2, h3, h4, h5{
 
     color: #37474F;
@@ -121,8 +121,29 @@ h1, h2, h3, h4, h5{
 
 }
 
+.f-datepicker{
+
+    background-color: white;
+    border: none;
+    border-bottom: 1px solid #607D8B;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.f-datepicker:hover{
+
+    /*background-color:#009688*/
+
+}
+
 .box{
 
     border-bottom : 2px solid #607D8B;
+
+}
+
+.stylist-card{
+
+    height:200px;
 
 }
