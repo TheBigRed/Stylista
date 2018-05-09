@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
     $('#search-input').keydown(function(event) {
         if (event.keyCode == 13) {
             alert("hey");
@@ -6,4 +7,7 @@ $(document).ready(function() {
             return false;
          }
     });
+
+    $("#datepicker").flatpickr({});
+
 });

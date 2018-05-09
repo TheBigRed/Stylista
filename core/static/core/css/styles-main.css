@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Shrikhand');
 @import url('https://fonts.googleapis.com/css?family=Raleway:600i');
-
+/*
 *{
 
     border: 1px solid red;
 
 }
-
+*/
 h1, h2, h3, h4, h5{
 
+    color: #37474F;
     font-family: 'Shrikhand', cursive;
 
 }
@@ -19,9 +20,12 @@ h1, h2, h3, h4, h5{
 
 }
 
-.navbar{
+.navbar-custom{
 
     height: 90px;
+    -webkit-box-shadow: 0px 0px 23px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 23px -10px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 23px -10px rgba(0,0,0,0.75);
 
 }
 
@@ -60,6 +64,22 @@ h1, h2, h3, h4, h5{
     font-family: 'Raleway', sans-serif;
 }
 
+.search-input{
+
+    -webkit-box-shadow: 0px 0px 23px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 23px -10px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 23px -10px rgba(0,0,0,0.75);
+
+}
+
+.main-container{
+
+    -webkit-box-shadow: 0px 0px 23px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 23px -10px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 23px -10px rgba(0,0,0,0.75);
+
+}
+
 .dropdown-item{
 
     padding: 0.5rem 1.5rem;
@@ -69,22 +89,40 @@ h1, h2, h3, h4, h5{
 
 .top-shelf{
 
-    height:150px;
-    background-color: #CFD8DC;
+    background-color: #E0F2F1;
 
 }
 
 .top-shelf-left{
 
     height: inherit;
-    background-color: #CFD8DC;
 
 }
 
 .primary-btns{
 
-    width:75%;
-    background-color: #26A69A;
+    width:9rem;
+    background-color: #80CBC4;
     font-family: 'Shrikhand', cursive;
     color: #455A64;
+    border-radius: 0;
+    border: none;
+    font-size: 1rem;
+    -webkit-box-shadow: 0px 0px 23px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 23px -10px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 23px -10px rgba(0,0,0,0.75);
+
+}
+
+.primary-btns:hover{
+
+    color: #455A64;
+    background-color: #4DB6AC;
+
+}
+
+.box{
+
+    border-bottom : 2px solid #607D8B;
+
 }
