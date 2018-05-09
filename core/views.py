@@ -31,3 +31,10 @@ def searchresults(request):
     context = {}
     #return HttpResponse(template.render(context, request))
     #return render(request, 'core/main.html', {'stylist': stylist})
+
+
+def searchrefined(request):
+    template = loader.get_template('core/main.html')
+    context = {}
+    #return HttpResponse(template.render(context, request))
+    return render(request, 'core/refined.html')

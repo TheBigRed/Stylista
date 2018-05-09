@@ -33,7 +33,7 @@ $(document).ready(function() {
             serializeData = { ListID: '1', ItemName: 'test' };
 
             $.ajax({
-                url: "/landing/about/",
+                url: "/core/searchrefined/",
                 type: "get",
                 data: serializeData,
                 success: function(response) {

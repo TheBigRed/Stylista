@@ -6,4 +6,5 @@ app_name = 'core'
 urlpatterns = [
     path('main/<stylist>', views.main, name='main'),
     path('searchresults/', views.searchresults, name='searchresults'),
+    path('searchrefined/', views.searchrefined, name='searchrefined'),
 ]
