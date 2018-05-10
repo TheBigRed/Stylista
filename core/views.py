@@ -1,8 +1,10 @@
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.template import loader
 from django.shortcuts import render
+from django.core.files.storage import FileSystemStorage
 from core.models import Account
 from landing.models import Stylist
+from .forms import UploadFileForm
 
 
 def main(request, stylist):
@@ -38,3 +40,18 @@ def searchrefined(request):
     context = {}
     #return HttpResponse(template.render(context, request))
     return render(request, 'core/refined.html')
+
+
+def uploadmodule(request):
+    if request.method == 'POST':
+        form = UploadFileForm(request.POST, request.FILES)
+        if form.is_valid():
+            fs = FileSystemStorage()
+            aa = Account(account_holder_id=8, store_front=form.cleaned_data['file'])
+            aa.save()
+            fs.save(form.cleaned_data['title'] + 'fs', form.cleaned_data['file'], max_length=4000)
+            return HttpResponse("Uploaded <filename>")
+    else:
+        form = UploadFileForm()
+        return render(request, 'core/upload_module.html', {'uploadform': form})
+    return render(request, 'core/upload_module.html', {})

@@ -1,0 +1,7 @@
+<form method="post" enctype="multipart/form-data">
+{% csrf_token %}
+{{ uploadform.as_p }}
+<button type="submit">UPLOAD</button>
+</form>
+
+<p><a href="{% url 'core:uploadmodule' %}">Return to home</a></p>
