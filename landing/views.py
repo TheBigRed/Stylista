@@ -10,6 +10,7 @@ from core.models import Account
 
 
 def index(request):
+    request.session.set_test_cookie()
     template = loader.get_template('landing/index.html')
     context = {}
     return HttpResponse(template.render(context, request))
@@ -123,4 +124,7 @@ def about(request):
     :param request: none
     :return: about site page
     """
+    if request.session.test_cookie_worked():
+        print("cookie implemented")
+
     return render(request, 'landing/about.html')
