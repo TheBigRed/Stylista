@@ -1,5 +1,6 @@
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.contrib.auth import authenticate
+from django.contrib.sessions.backends.db import SessionStore
 from django.template import loader
 from django.shortcuts import render, redirect
 from .models import Stylist
@@ -11,9 +12,18 @@ from core.models import Account
 
 def index(request):
     request.session.set_test_cookie()
+    request.session[0] = 'bar'
+    s = SessionStore()
+    s['last_login'] = 1376587691
+    s.create()
+    print('Session key: {0} \n Last Login: {1}'.format(s.session_key, s['last_login']))
+
     template = loader.get_template('landing/index.html')
     context = {}
-    return HttpResponse(template.render(context, request))
+    cresponse = HttpResponse(template.render(context, request))
+    cresponse.set_cookie('logged_in_status', 'never_use_this_ever')
+    return cresponse
+    #return HttpResponse(template.render(context, request))
 
 
 def stylist(request, stylist_id):
