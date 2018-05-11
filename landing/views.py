@@ -1,6 +1,5 @@
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.contrib.auth import authenticate
-from django.contrib.sessions.backends.db import SessionStore
 from django.template import loader
 from django.shortcuts import render, redirect
 from .models import Stylist
@@ -8,22 +7,14 @@ from datetime import datetime
 from django.urls import reverse
 from django.core.exceptions import ObjectDoesNotExist
 from core.models import Account
+from landing.utils import create_session
+from django.contrib.sessions.backends.db import SessionStore
 
 
 def index(request):
-    request.session.set_test_cookie()
-    request.session[0] = 'bar'
-    s = SessionStore()
-    s['last_login'] = 1376587691
-    s.create()
-    print('Session key: {0} \n Last Login: {1}'.format(s.session_key, s['last_login']))
-
     template = loader.get_template('landing/index.html')
     context = {}
-    cresponse = HttpResponse(template.render(context, request))
-    cresponse.set_cookie('logged_in_status', 'never_use_this_ever')
-    return cresponse
-    #return HttpResponse(template.render(context, request))
+    return HttpResponse(template.render(context, request))
 
 
 def stylist(request, stylist_id):
@@ -92,11 +83,12 @@ def authenticate(request):
         email = request.POST['email']
         password = request.POST['password']
         stylista = Stylist.objects.get(email=email, password=password)
-        stylist = 'test stylista'
-
+        user_firstname = stylista.first_name
         if stylista:
             #return HttpResponseRedirect(reverse('landing:account', args=(stylista,)))
-            return HttpResponseRedirect(reverse('core:main', args=(stylist,)))
+            print("Authenticated : " + user_firstname)
+            create_session(request, stylista.pk)
+            return HttpResponseRedirect(reverse('core:main'))
 
     except ObjectDoesNotExist:
         #return redirect('core:main')
@@ -134,7 +126,4 @@ def about(request):
     :param request: none
     :return: about site page
     """
-    if request.session.test_cookie_worked():
-        print("cookie implemented")
-
     return render(request, 'landing/about.html')

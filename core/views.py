@@ -5,12 +5,20 @@ from django.core.files.storage import FileSystemStorage
 from core.models import Account
 from landing.models import Stylist
 from .forms import UploadFileForm
+from landing.utils import get_dbsession
 
 
-def main(request, stylist):
-    template = loader.get_template('core/main.html')
-    context = {}
-    #return HttpResponse(template.render(context, request))
+def main(request):
+    '''
+    :param request: get request which has user on db session stored in session cookie
+    :return: main page with correct user after authenticate session
+    '''
+    s = get_dbsession(request.session['session_login'])
+    stylist = Stylist.objects.get(pk=s['user_pk'])
+    print("Received cookie session: {}".format(request.session.session_key))
+    request.session.cycle_key()
+    #print("Main page received user session: {0}".format(user_session))
+    #print("New cookie session {0} with db session value {1}".format(request.session.session_key, request.session['session_login']))
     return render(request, 'core/main.html', {'stylist': stylist})
 
 
