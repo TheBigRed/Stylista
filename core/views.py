@@ -24,6 +24,7 @@ def main(request):
     else:
         return HttpResponseRedirect(reverse('landing:login'))
 
+
 def searchresults(request):
     try:
         search = request.GET['search']
