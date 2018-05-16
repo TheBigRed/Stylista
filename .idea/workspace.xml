@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0ab90ae-b7e9-480a-91f5-25ae9bf879a1" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/static/core/css/styles-main.css" beforeDir="false" afterPath="$PROJECT_DIR$/core/static/core/css/styles-main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/templates/core/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/core/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/user_9/storefront/Screenshot_from_2018-05-09_22-43-25.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/user_9/storefront/Screenshot_from_2018-05-09_22-43-25_XowuvPd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stylelista/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/stylelista/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,20 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="results.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/templates/core/results.html">
+      <file leaf-file-name="styles-main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/static/core/css/styles-main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="refined.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/templates/core/refined.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+            <state relative-caret-position="370">
+              <caret line="104" column="29" selection-start-line="104" selection-start-column="29" selection-end-line="104" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -40,8 +26,8 @@
       <file leaf-file-name="main.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/templates/core/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="117" column="26" selection-start-line="117" selection-start-column="26" selection-end-line="117" selection-end-column="26" />
+            <state relative-caret-position="414">
+              <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -53,39 +39,7 @@
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#0;n#div#2;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#3;n#div#0;n#div#2;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stylelista/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2196">
-              <caret line="122" selection-start-line="122" selection-end-line="122" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stylelista/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="9" column="16" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#2;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -147,16 +101,16 @@
         <option value="$PROJECT_DIR$/landing/urls.py" />
         <option value="$PROJECT_DIR$/core/urls.py" />
         <option value="$PROJECT_DIR$/stylelista/urls.py" />
-        <option value="$PROJECT_DIR$/core/static/core/css/styles-main.css" />
         <option value="$PROJECT_DIR$/stylelista/settings.py" />
         <option value="$PROJECT_DIR$/core/templates/core/results.html" />
+        <option value="$PROJECT_DIR$/core/static/core/css/styles-main.css" />
         <option value="$PROJECT_DIR$/core/templates/core/main.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="307" />
-    <option name="y" value="63" />
+    <option name="x" value="306" />
+    <option name="y" value="171" />
     <option name="width" value="1414" />
     <option name="height" value="795" />
   </component>
@@ -202,6 +156,14 @@
               <item name="stylelista" type="b2602c69:ProjectViewProjectNode" />
               <item name="stylelista" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="imgs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="stylelista" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stylelista" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -227,7 +189,7 @@
               <item name="stylelista" type="462c0819:PsiDirectoryNode" />
               <item name="media" type="462c0819:PsiDirectoryNode" />
               <item name="user_9" type="462c0819:PsiDirectoryNode" />
-              <item name="storefront" type="462c0819:PsiDirectoryNode" />
+              <item name="gallery" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="stylelista" type="b2602c69:ProjectViewProjectNode" />
@@ -248,19 +210,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/media/user_9/gallery" />
+      <recent name="$PROJECT_DIR$/media/user_9/storefront" />
+      <recent name="$PROJECT_DIR$/core/static/core/imgs/main" />
+      <recent name="$PROJECT_DIR$/landing/static/landing/imgs/index" />
+      <recent name="$PROJECT_DIR$/core/static/core/imgs" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/landing" />
       <recent name="$PROJECT_DIR$/core/templates/core" />
       <recent name="$PROJECT_DIR$/landing/static/landing/imgs/index" />
       <recent name="$PROJECT_DIR$/core/static/core/imgs/main" />
       <recent name="$PROJECT_DIR$/landing/static/landing" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/media/user_9/storefront" />
-      <recent name="$PROJECT_DIR$/core/static/core/imgs/main" />
-      <recent name="$PROJECT_DIR$/landing/static/landing/imgs/index" />
-      <recent name="$PROJECT_DIR$/core/static/core/imgs" />
-      <recent name="$PROJECT_DIR$/templates/admin" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -314,7 +276,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="307" y="63" width="1414" height="795" extended-state="0" />
+    <frame x="306" y="171" width="1414" height="795" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.2496464" />
@@ -346,25 +308,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/templates/core/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2304">
-          <caret line="128" column="22" selection-start-line="128" selection-start-column="22" selection-end-line="128" selection-end-column="22" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#2;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#div#2;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/landing/templates/landing/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -660,13 +603,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/static/core/css/styles-main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2556">
-          <caret line="142" column="1" selection-start-line="142" selection-start-column="1" selection-end-line="142" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stylelista/wsgi.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -677,26 +613,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="16" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stylelista/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/templates/core/results.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -704,10 +620,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/media/user_9/gallery/gallery-placeholder.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stylelista/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/static/core/css/styles-main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="104" column="29" selection-start-line="104" selection-start-column="29" selection-end-line="104" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/core/templates/core/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="117" column="26" selection-start-line="117" selection-start-column="26" selection-end-line="117" selection-end-column="26" />
+        <state relative-caret-position="414">
+          <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -719,6 +665,7 @@
             <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#2;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#div#0;n#div#2;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#2;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
