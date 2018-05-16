@@ -148,7 +148,15 @@ h1, h2, h3, h4, h5{
 
 }
 
-.gallery-img{
+.img-storefront{
+
+    width:100%;
+    height:300px;
+    object-fit:cover;
+
+}
+
+.img-gallery{
 
     width:100%;
     height:130px;

@@ -1,10 +1,10 @@
 $(document).ready(function() {
 
-    $('#search-input').keydown(function(event) {
+    $('#search-form').keydown(function(event) {
         if (event.keyCode == 13) {
-            alert("hey");
-            this.form.submit();
-            return false;
+            //this.form.submit();
+            this.submit();
+            //return false;
          }
     });
 
@@ -37,6 +37,7 @@ $(document).ready(function() {
                 type: "get",
                 data: serializeData,
                 success: function(response) {
+                    $("#ajax-response").empty();
                     $("#ajax-response").html(response);
                 }
 
