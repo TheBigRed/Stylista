@@ -9,14 +9,14 @@
 
 h1, h2, h3, h4, h5{
 
-    color: #263238;
+    color: #37474F;
     font-family: 'Shrikhand', cursive;
 
 }
 
 .bg-light{
 
-    background-color: #009688 !important;
+    background-color: #4DB6AC !important;
 
 }
 
@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5{
     font-family: 'Shrikhand', cursive;
     padding-right: 1.5rem;
     padding-left: 1.5rem;
-    color: #263238;
+    color: #37474F;
 }
 
 .account-pic{
@@ -89,7 +89,7 @@ h1, h2, h3, h4, h5{
 
 .top-shelf{
 
-    background-color: #009688;
+    background-color: #4DB6AC;
 
 }
 
@@ -102,7 +102,7 @@ h1, h2, h3, h4, h5{
 .primary-btns{
 
     width:9rem;
-    background-color: #03A9F4;
+    background-color: #80CBC4;
     font-family: 'Shrikhand', cursive;
     color: #455A64;
     border-radius: 0;
@@ -117,7 +117,7 @@ h1, h2, h3, h4, h5{
 .primary-btns:hover{
 
     color: #455A64;
-    background-color: #80CBC4;
+    background-color: #81D4FA;
 
 }
 
