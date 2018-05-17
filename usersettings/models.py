@@ -12,6 +12,7 @@ class UserSetting(models.Model):
     deactivate = models.BooleanField()
     time_zone = models.CharField(max_length=15)
     languages = models.CharField(max_length=15)
+    currency = models.CharField(max_length=15)
 
     def __str__(self):
         return self
