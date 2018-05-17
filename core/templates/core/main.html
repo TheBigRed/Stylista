@@ -23,14 +23,14 @@
             </div>
             <div class="dropdown">
                 <div class="account-pic dropdown dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img style="height:100%;" class="img-fluid" src="{% static 'core/imgs/main/account_icon.svg' %}"/>
-                    <div id="c-dropdown-menu" class="dropdown-menu dropdown-menu-pull-left" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Edit Profile</a>
-                        <a class="dropdown-item" href="#">Refer Friends</a>
-                        <a class="dropdown-item" href="#">Bookings</a>
-                        <a class="dropdown-item" href="#">Account</a>
-                        <a class="dropdown-item" href="#">Logout</a>
-                    </div>
+                    <img style="height:100%;" class="img-fluid" src="{% static 'core/imgs/main/account_icon.svg' %}">
+                </div>
+                <div id="c-dropdown-menu" class="dropdown-menu dropdown-menu-pull-left" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Edit Profile</a>
+                    <a class="dropdown-item" href="#">Refer Friends</a>
+                    <a class="dropdown-item" href="#">Bookings</a>
+                    <a class="dropdown-item" href="{% url 'usersettings:index' %}">Account</a>
+                    <a class="dropdown-item" href="#">Logout</a>
                 </div>
             </div>
         </div>
