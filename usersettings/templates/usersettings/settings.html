@@ -8,16 +8,40 @@
         <link rel="stylesheet" type="text/css" href="{% static 'usersettings/css/styles-settings.css' %}">
     </head>
 <body>
-    <div class="container mt-5">
-        <h4>welcome to user settings page</h4>
+
+    <div class="container mt-5 popout-box">
+        <div class="row top-clip align-items-center">
+            <h4 class="ml-3">WELCOME TO USER SETTINGS PAGE</h4>
+        </div>
         <div class="row justify-content-end">
-            <div style="height:50px"class="col-4">
+            <div class="col-4 d-none d-sm-block">
+                <ul class="list-group list-group-flush mt-4">
+                    <li class="list-group-item active">EDIT PROFILE</li>
+                    <li class="list-group-item">REVIEWS</li>
+                    <li class="list-group-item">PHOTOS</li>
+                    <li class="list-group-item">PAYMENTS</li>
+                    <li class="list-group-item">ACCOUNT SETTINGS</li>
+                </ul>
             </div>
-            <div style="height:300px" class="col-8">
-            </div>
-            <div style="height:300px" class="col-8">
-            </div>
+            <div class="col-12 col-lg-8 pl-5 pr-5">
+                <form>
+                    <div class="form-group">
+                        <label class="font-rale pl-3 mt-4">First Name</label>
+                        <input type="text" name="firstname" class="form-control" id="firstname">
+                        <label class="font-rale pl-3 mt-4">Last Name</label>
+                        <input type="text" name="firstname" class="form-control" id="lastname">
+                        <label class="font-rale pl-3 mt-4">Email</label>
+                        <input type="text" name="firstname" class="form-control" id="lastname">
+                        <label class="font-rale pl-3 mt-4">Password</label>
+                        <input type="text" name="firstname" class="form-control" id="lastname">
+                        <br/>
+                        <button class="btn btn-primary btn-lg primary-btns" type="submit">SUBMIT</button>
                     </div>
+                </form>
+            </div>
+            <div style="height:300px" class="col-12 col-lg-8 mt-3">
+            </div>
+        </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
