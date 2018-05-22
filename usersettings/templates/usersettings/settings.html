@@ -24,7 +24,7 @@
                 </ul>
             </div>
             <div class="col-12 col-lg-8 pl-5 pr-5">
-                <form>
+                <form action="{% url 'usersettings:updateaccount' %}" method="get">
                     <div class="form-group">
                         <label class="font-rale mt-4">First Name</label>
                         <input type="text" name="firstname" class="form-control" id="firstname">
