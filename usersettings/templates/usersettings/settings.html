@@ -24,25 +24,26 @@
                 </ul>
             </div>
             <div class="col-12 col-lg-8 pl-5 pr-5">
-                <form action="{% url 'usersettings:updateaccount' %}" method="get">
+                <form id="setting-form" action="{% url 'usersettings:updateaccount' %}" method="post">
+                    {% csrf_token %}
                     <div class="form-group">
                         <label class="font-rale mt-4">First Name</label>
-                        <input type="text" name="firstname" class="form-control" id="firstname">
+                        <input type="text" name="firstname" class="form-control" id="account-firstname" placeholder={{ stylist.first_name }}>
                         <label class="font-rale mt-4">Last Name</label>
-                        <input type="text" name="firstname" class="form-control" id="lastname">
+                        <input type="text" name="lastname" class="form-control" id="account-lastname" placeholder={{ stylist.last_name }}>
                         <label class="font-rale mt-4">Email</label>
-                        <input type="text" name="firstname" class="form-control" id="lastname">
+                        <input type="text" name="email" class="form-control" id="account-email" placeholder={{ stylist.email }}>
                         <label class="font-rale mt-4">Password</label>
-                        <input type="text" name="firstname" class="form-control" id="lastname">
+                        <input type="text" name="password" class="form-control" id="account-password">
                         <label class="font-rale mt-4">Phone Number</label>
-                        <input type="text" name="firstname" class="form-control" id="lastname">
+                        <input type="text" name="phonenumber" class="form-control" id="account-phonenumber">
                         <label class="font-rale mt-4">Gender</label>
-                        <select style="width:20%;" class="form-control" id="exampleFormControlSelect1">
+                        <select style="width:20%;" class="form-control" name="gender" id="FormControlSelect-gender">
                             <option>Male</option>
                             <option>Female</option>
                         </select>
                         <label class="font-rale mt-4">Stylist Type</label>
-                        <select style="width:20%;" class="form-control" id="exampleFormControlSelect1">
+                        <select style="width:20%;" class="form-control" name="stylist_type" id="FormControlSelect-stylist_type">
                             <option>Hair Stylist</option>
                             <option>Makeup</option>
                             <option>MUAH</option>
@@ -53,9 +54,9 @@
                         <button class="btn btn-primary btn-lg primary-btns" type="submit">SUBMIT</button>
                     </div>
                 </form>
-            </div>
+            </div><!--
             <div style="height:300px" class="col-12 col-lg-8 mt-3">
-            </div>
+            </div>-->
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

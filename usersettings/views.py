@@ -7,7 +7,15 @@ from core.models import Account
 
 
 def index(request):
-    return render(request, 'usersettings/settings.html')
+
+    if request.session.keys():
+        s = get_dbsession(request.session['session_login'])
+        stylist = Stylist.objects.get(pk=s['user_pk'])
+        print("Received cookie session: {}".format(stylist.first_name))
+        return render(request, 'usersettings/settings.html', {'stylist': stylist})
+
+    else:
+        return HttpResponseRedirect(reverse('landing:login'))
 
 
 def updateaccount(request):
@@ -25,6 +33,22 @@ def updateaccount(request):
         print("Account session for: {}".format(account.account_holder))
         request.session.cycle_key()
 
-        return HttpResponse("Updated account")
+        try:
+            firstname = request.POST['firstname']
+            lastname = request.POST['lastname']
+            # email = request.POST['email']
+            # password = request.POST['password']
+            # phone_number = request.POST['phone_number']
+            # gender = request.POST['gender']
+            # stylist_type = request.POST['stylist_type']
+
+            print("Retrieved from post firstname: {}".format(firstname))
+            return HttpResponse("Updated account")
+
+        except KeyError:
+            raise Http404("Please sign up")
+
+
+
     else:
         return HttpResponseRedirect(reverse('landing:login'))
