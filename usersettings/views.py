@@ -2,12 +2,12 @@ from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.shortcuts import render
 from landing.utils import get_dbsession
 from django.urls import reverse
+from django.views import View
 from landing.models import Stylist
 from core.models import Account
 
 
 def index(request):
-
     if request.session.keys():
         s = get_dbsession(request.session['session_login'])
         stylist = Stylist.objects.get(pk=s['user_pk'])
@@ -43,12 +43,10 @@ def updateaccount(request):
             # stylist_type = request.POST['stylist_type']
 
             print("Retrieved from post firstname: {}".format(firstname))
-            return HttpResponse("Updated account")
+            return render(request, 'usersettings/settingupdated.html', {'stylist': stylist})
 
         except KeyError:
             raise Http404("Please sign up")
-
-
 
     else:
         return HttpResponseRedirect(reverse('landing:login'))

@@ -10,8 +10,7 @@ $(document).ready(function() {
         $('#setting-form').addClass('d-none')
     });
 
-    loadInputValues();
-
+    //loadInputValues();
 
 });
 
