@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d0ab90ae-b7e9-480a-91f5-25ae9bf879a1" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/static/core/js/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/static/core/js/profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/static/core/css/styles-profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/core/static/core/css/styles-profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/static/core/js/lightgallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/static/core/js/lightgallery/lightgallery.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/templates/core/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/core/profile.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +19,8 @@
       <file leaf-file-name="profile.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/templates/core/profile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
+            <state relative-caret-position="360">
+              <caret line="29" column="39" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -35,11 +36,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="styles-profile.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/static/core/css/styles-profile.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="profile.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/static/core/js/profile.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="108">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -65,8 +75,8 @@
       <file leaf-file-name="styles-main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/static/core/css/styles-main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="622">
-              <caret line="152" selection-start-line="152" selection-end-line="152" />
+            <state relative-caret-position="234">
+              <caret line="79" column="4" lean-forward="true" selection-start-line="79" selection-start-column="4" selection-end-line="81" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -150,11 +160,11 @@
         <option value="$PROJECT_DIR$/core/admin.py" />
         <option value="$PROJECT_DIR$/usersettings/models.py" />
         <option value="$PROJECT_DIR$/core/views.py" />
-        <option value="$PROJECT_DIR$/core/static/core/css/styles-profile.css" />
         <option value="$PROJECT_DIR$/core/static/core/css/photoswipe.css" />
         <option value="$PROJECT_DIR$/core/static/core/css/ps-defaultskin.css" />
         <option value="$PROJECT_DIR$/core/static/core/js/photoswipe.js" />
         <option value="$PROJECT_DIR$/core/static/core/js/profile.js" />
+        <option value="$PROJECT_DIR$/core/static/core/css/styles-profile.css" />
         <option value="$PROJECT_DIR$/core/templates/core/profile.html" />
       </list>
     </option>
@@ -163,8 +173,8 @@
     <scope name="hidevenv" pattern="!file[stylelista]:bin//*&amp;&amp;!file[stylelista]:bin/*&amp;&amp;!file[stylelista]:lib/*&amp;&amp;!file[stylelista]:lib64/*&amp;&amp;!file:db.sqlite3&amp;&amp;!file:README.md&amp;&amp;!file[stylelista]:lib//*&amp;&amp;!file[stylelista]:lib64//*&amp;&amp;!file:.gitignore&amp;&amp;!file:share/python-wheels/appdirs-1.4.0-py2.py3-none-any.whl&amp;&amp;!file[stylelista]:share//*" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="123" />
-    <option name="y" value="183" />
+    <option name="x" value="224" />
+    <option name="y" value="147" />
     <option name="width" value="1415" />
     <option name="height" value="795" />
   </component>
@@ -233,6 +243,15 @@
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="stylelista" type="cbb8eebc:String" user="stylelista" />
+              <item name="core" type="cbb8eebc:String" user="core" />
+              <item name="static" type="cbb8eebc:String" user="static" />
+              <item name="core" type="cbb8eebc:String" user="core" />
+              <item name="js" type="cbb8eebc:String" user="js" />
+              <item name="lightgallery" type="cbb8eebc:String" user="lightgallery" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="stylelista" type="cbb8eebc:String" user="stylelista" />
               <item name="media" type="cbb8eebc:String" user="media" />
             </path>
             <path>
@@ -290,18 +309,18 @@
     <property name="settings.editor.selected.configurable" value="project.scopes" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/landing" />
-      <recent name="$PROJECT_DIR$/core/templates/core" />
-      <recent name="$PROJECT_DIR$/landing/static/landing/imgs/index" />
-      <recent name="$PROJECT_DIR$/core/static/core/imgs/main" />
-      <recent name="$PROJECT_DIR$/landing/static/landing" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/core/static/core/js/lightgallery" />
       <recent name="$PROJECT_DIR$/core/static/core/js" />
       <recent name="$PROJECT_DIR$/core/static/core/css" />
       <recent name="$PROJECT_DIR$/media/user_9/gallery" />
       <recent name="$PROJECT_DIR$/media/user_9/storefront" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/core/static/core/js/lightgallery" />
+      <recent name="$PROJECT_DIR$/landing" />
+      <recent name="$PROJECT_DIR$/core/templates/core" />
+      <recent name="$PROJECT_DIR$/landing/static/landing/imgs/index" />
       <recent name="$PROJECT_DIR$/core/static/core/imgs/main" />
     </key>
   </component>
@@ -356,27 +375,27 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="123" y="183" width="1415" height="795" extended-state="0" />
+    <frame x="224" y="147" width="1415" height="795" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24946997" />
       <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.32846716" />
       <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="bottom" id="Python Console" order="2" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.32846716" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="3" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="right" id="Data View" order="0" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="5" weight="0.329927" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.329927" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -388,20 +407,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/landing/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/landing/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stylelista/wsgi.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -634,20 +639,8 @@
     <entry file="file://$PROJECT_DIR$/media/user_10/storefront/zPKtest_VaTDESC.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/static/core/css/ps-defaultskin.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1432">
-          <caret line="482" lean-forward="true" selection-start-line="482" selection-end-line="482" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/static/core/css/photoswipe.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1062">
-          <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/core/static/core/css/ps-defaultskin.css" />
+    <entry file="file://$PROJECT_DIR$/core/static/core/css/photoswipe.css" />
     <entry file="file://$PROJECT_DIR$/core/templates/core/main.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-389">
@@ -655,20 +648,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/static/core/js/photoswipe.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/static/core/css/styles-profile.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/core/static/core/js/photoswipe.js" />
     <entry file="file://$PROJECT_DIR$/core/static/core/css/lightgallery.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -676,7 +656,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/static/core/js/lightgallery.js">
+    <entry file="file://$PROJECT_DIR$/core/static/core/js/lightgallery/lightgallery.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-270" />
       </provider>
@@ -688,13 +668,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/static/core/css/styles-main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="622">
-          <caret line="152" selection-start-line="152" selection-end-line="152" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/static/core/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="882">
@@ -702,17 +675,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/core/static/core/css/styles-main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="79" column="4" lean-forward="true" selection-start-line="79" selection-start-column="4" selection-end-line="81" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/static/core/css/styles-profile.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/core/static/core/js/profile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/static/core/js/lightgallery/lg-thumbnail.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/static/core/js/lightgallery/lg-fullscreen.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="21" lean-forward="true" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/templates/core/profile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
+        <state relative-caret-position="360">
+          <caret line="29" column="39" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />

@@ -9,7 +9,7 @@
         <link rel="stylesheet" type="text/css" href="{% static 'core/css/styles-profile.css' %}">
     </head>
 <body>
-    <div style="margin-top:100px;" class="container">
+    <div style="margin-top:100px;" class="container profile-card">
         <div class="row">
             <div class="col-12 col-lg-12 profile-top-shelf">
                 <h4 class="mt-3 mb-3">{{ stylist.first_name }}</h4>
@@ -24,9 +24,10 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-12 col-lg-8">
-                <img class="img-fluid img-storefront" src="/media/user_9/storefront/hero-storefront.png"/>"
+                <img class="img-fluid img-storefront" src="/media/user_9/storefront/hero-storefront.png"/>
             </div>
         </div>
+        <p class="mt-3 mb-3 text-center"> {{ account.about_me }}</p>
         <div class="row justify-content-center">
             <div class="col-12 col-lg-11">
                 <div id="lightgallery">
@@ -65,9 +66,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-    <script src="{% static 'core/js/lightgallery.js' %}"></script>
-    <script src="js/lg-thumbnail.min.js"></script>
-    <script src="js/lg-fullscreen.min.js"></script>
+    <script src="{% static 'core/js/lightgallery/lightgallery.js' %}"></script>
+    <script src="{% static 'core/js/lightgallery/lg-thumbnail.min.js' %}"></script>
+    <script src="{% static 'core/js/lightgallery/lg-fullscreen.min.js' %}"></script>
     <script src="{% static 'core/js/profile.js' %}"></script>
 </body>
 </html>
