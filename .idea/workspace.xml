@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d0ab90ae-b7e9-480a-91f5-25ae9bf879a1" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/static/core/css/styles-profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/core/static/core/css/styles-profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/static/core/js/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/static/core/js/profile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/templates/core/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/core/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,44 +13,42 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file leaf-file-name="styles-profile.css" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/core/static/core/css/styles-profile.css">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="352">
-                    <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/templates/core/main.html">
+      <file leaf-file-name="profile.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/core/templates/core/profile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="108" column="49" lean-forward="true" selection-start-line="108" selection-start-column="49" selection-end-line="108" selection-end-column="49" />
+            <state relative-caret-position="475">
+              <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#1;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#2;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#3;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#4;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#5;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#6;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#7;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/core/templates/core/profile.html">
+      <file leaf-file-name="profile.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/static/core/js/profile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="31" selection-end-column="18" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="108">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/static/core/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="882">
+              <caret line="49" selection-start-line="49" selection-end-line="49" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -68,7 +65,7 @@
       <file leaf-file-name="styles-main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/static/core/css/styles-main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2736">
+            <state relative-caret-position="622">
               <caret line="152" selection-start-line="152" selection-end-line="152" />
             </state>
           </provider>
@@ -108,7 +105,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/landing/templates/landing/detail.html" />
         <option value="$PROJECT_DIR$/landing/templates/landing/stylist.html" />
         <option value="$PROJECT_DIR$/landing/templates/landing/thankyou.html" />
         <option value="$PROJECT_DIR$/testbench.py" />
@@ -155,6 +151,10 @@
         <option value="$PROJECT_DIR$/usersettings/models.py" />
         <option value="$PROJECT_DIR$/core/views.py" />
         <option value="$PROJECT_DIR$/core/static/core/css/styles-profile.css" />
+        <option value="$PROJECT_DIR$/core/static/core/css/photoswipe.css" />
+        <option value="$PROJECT_DIR$/core/static/core/css/ps-defaultskin.css" />
+        <option value="$PROJECT_DIR$/core/static/core/js/photoswipe.js" />
+        <option value="$PROJECT_DIR$/core/static/core/js/profile.js" />
         <option value="$PROJECT_DIR$/core/templates/core/profile.html" />
       </list>
     </option>
@@ -163,9 +163,9 @@
     <scope name="hidevenv" pattern="!file[stylelista]:bin//*&amp;&amp;!file[stylelista]:bin/*&amp;&amp;!file[stylelista]:lib/*&amp;&amp;!file[stylelista]:lib64/*&amp;&amp;!file:db.sqlite3&amp;&amp;!file:README.md&amp;&amp;!file[stylelista]:lib//*&amp;&amp;!file[stylelista]:lib64//*&amp;&amp;!file:.gitignore&amp;&amp;!file:share/python-wheels/appdirs-1.4.0-py2.py3-none-any.whl&amp;&amp;!file[stylelista]:share//*" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="350" />
-    <option name="y" value="201" />
-    <option name="width" value="1414" />
+    <option name="x" value="123" />
+    <option name="y" value="183" />
+    <option name="width" value="1415" />
     <option name="height" value="795" />
   </component>
   <component name="ProjectView">
@@ -204,6 +204,35 @@
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="stylelista" type="cbb8eebc:String" user="stylelista" />
+              <item name="core" type="cbb8eebc:String" user="core" />
+              <item name="static" type="cbb8eebc:String" user="static" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="stylelista" type="cbb8eebc:String" user="stylelista" />
+              <item name="core" type="cbb8eebc:String" user="core" />
+              <item name="static" type="cbb8eebc:String" user="static" />
+              <item name="core" type="cbb8eebc:String" user="core" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="stylelista" type="cbb8eebc:String" user="stylelista" />
+              <item name="core" type="cbb8eebc:String" user="core" />
+              <item name="static" type="cbb8eebc:String" user="static" />
+              <item name="core" type="cbb8eebc:String" user="core" />
+              <item name="css" type="cbb8eebc:String" user="css" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="stylelista" type="cbb8eebc:String" user="stylelista" />
+              <item name="core" type="cbb8eebc:String" user="core" />
+              <item name="static" type="cbb8eebc:String" user="static" />
+              <item name="core" type="cbb8eebc:String" user="core" />
+              <item name="js" type="cbb8eebc:String" user="js" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="stylelista" type="cbb8eebc:String" user="stylelista" />
               <item name="media" type="cbb8eebc:String" user="media" />
             </path>
             <path>
@@ -230,12 +259,14 @@
               <item name="stylelista" type="cbb8eebc:String" user="stylelista" />
               <item name="media" type="cbb8eebc:String" user="media" />
               <item name="user_9" type="cbb8eebc:String" user="user_9" />
-              <item name="storefront" type="cbb8eebc:String" user="storefront" />
+              <item name="gallery" type="cbb8eebc:String" user="gallery" />
             </path>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="stylelista" type="cbb8eebc:String" user="stylelista" />
-              <item name="usersettings" type="cbb8eebc:String" user="usersettings" />
+              <item name="media" type="cbb8eebc:String" user="media" />
+              <item name="user_9" type="cbb8eebc:String" user="user_9" />
+              <item name="storefront" type="cbb8eebc:String" user="storefront" />
             </path>
           </expand>
           <select />
@@ -259,19 +290,19 @@
     <property name="settings.editor.selected.configurable" value="project.scopes" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/media/user_9/gallery" />
-      <recent name="$PROJECT_DIR$/media/user_9/storefront" />
-      <recent name="$PROJECT_DIR$/core/static/core/imgs/main" />
-      <recent name="$PROJECT_DIR$/landing/static/landing/imgs/index" />
-      <recent name="$PROJECT_DIR$/core/static/core/imgs" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/landing" />
       <recent name="$PROJECT_DIR$/core/templates/core" />
       <recent name="$PROJECT_DIR$/landing/static/landing/imgs/index" />
       <recent name="$PROJECT_DIR$/core/static/core/imgs/main" />
       <recent name="$PROJECT_DIR$/landing/static/landing" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/core/static/core/js" />
+      <recent name="$PROJECT_DIR$/core/static/core/css" />
+      <recent name="$PROJECT_DIR$/media/user_9/gallery" />
+      <recent name="$PROJECT_DIR$/media/user_9/storefront" />
+      <recent name="$PROJECT_DIR$/core/static/core/imgs/main" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -325,10 +356,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="350" y="201" width="1414" height="795" extended-state="0" />
+    <frame x="123" y="183" width="1415" height="795" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.2496464" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24946997" />
       <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="6" weight="0.32846716" />
@@ -357,35 +388,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/testbench.py" />
-    <entry file="file://$PROJECT_DIR$/landing/templates/landing/stylist.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/landing/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="27" selection-start-column="27" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/landing/templates/landing/about.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/python3.6/site-packages/django/db/models/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="514" column="8" selection-start-line="514" selection-start-column="8" selection-end-line="514" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/landing/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -454,13 +456,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="11" column="46" lean-forward="true" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/static/core/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="49" selection-start-line="49" selection-end-line="49" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -605,9 +600,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/static/core/js/profile.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -629,13 +621,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/usersettings/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1080">
@@ -646,30 +631,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/static/core/css/styles-main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2736">
-          <caret line="152" selection-start-line="152" selection-end-line="152" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/media/user_10/storefront/zPKtest_VaTDESC.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/core/static/core/css/ps-defaultskin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1432">
+          <caret line="482" lean-forward="true" selection-start-line="482" selection-end-line="482" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/static/core/css/photoswipe.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1062">
+          <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/core/templates/core/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
+        <state relative-caret-position="-389">
           <caret line="108" column="49" lean-forward="true" selection-start-line="108" selection-start-column="49" selection-end-line="108" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/templates/core/profile.html">
+    <entry file="file://$PROJECT_DIR$/core/static/core/js/photoswipe.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="31" selection-end-column="18" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="468">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
@@ -677,6 +666,64 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/static/core/css/lightgallery.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="41" lean-forward="true" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/static/core/js/lightgallery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-270" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usersettings/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/static/core/css/styles-main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="622">
+          <caret line="152" selection-start-line="152" selection-end-line="152" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/static/core/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="882">
+          <caret line="49" selection-start-line="49" selection-end-line="49" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/static/core/js/profile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/templates/core/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#1;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#2;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#3;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#4;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#5;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#6;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#7;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
