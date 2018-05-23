@@ -72,7 +72,8 @@ def profile(request):
     if request.session.keys():
         s = get_dbsession(request.session['session_login'])
         stylist = Stylist.objects.get(pk=s['user_pk'])
+        account = Account.objects.get(account_holder_id=s['user_pk'])
         request.session.cycle_key()
-        return render(request, 'core/profile.html', {'stylist': stylist})
+        return render(request, 'core/profile.html', {'stylist': stylist, 'account': account})
     else:
         return HttpResponseRedirect(reverse('landing:login'))

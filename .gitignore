@@ -9,3 +9,5 @@ pyvenv.cfg
 .venv
 pip-selfcheck.json
 media/user_10/storefront/
+
+media/user_9/storefront/

@@ -14,8 +14,28 @@ h1, h2, h3, h4, h5{
 
 }
 
+.font-raleway{
+
+    font-family: "Raleway", sans-serif;
+
+}
+
 .profile-top-shelf{
 
     background-color: #4DB6AC;
+
+}
+
+.profile-bottom-shelf{
+
+    background-color: #B2DFDB;
+    color: #455A64;
+}
+
+.img-storefront{
+
+    width:100%;
+    height:300px;
+    object-fit:cover;
 
 }
