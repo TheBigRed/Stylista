@@ -29,10 +29,11 @@ class Account(models.Model):
 
     def user_directory_path(self, store_front):
         # file will be uploaded to MEDIA_ROOT/user_<id>/<filename>
+        #print("Saved user " + self.account_holder + " AND " + self.acount_holder_id)
         return 'user_{0}/storefront/{1}'.format(self.account_holder_id, self.store_front.__str__())
 
     store_front = models.ImageField(upload_to=user_directory_path, default='/user/storefront/upload.jpg')
     #store_front = models.ImageField(upload_to='kottai/test', default='/user/storefront/upload.jpg')
 
-    def __str__(self):
-        return self.account_holder
+    #def __str__(self):
+        #return self.account_holder
