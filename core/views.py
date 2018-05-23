@@ -57,7 +57,8 @@ def uploadmodule(request):
     if request.method == 'POST':
         form = UploadFileForm(request.POST, request.FILES)
         if form.is_valid():
-            aa = Account(account_holder_id=9, store_front=form.cleaned_data['file'])
+            s = get_dbsession(request.session['session_login'])
+            aa = Account(account_holder_id=s['user_pk'], store_front=form.cleaned_data['file'])
             aa.save()
             return HttpResponse("Uploaded <filename>")
     else:
