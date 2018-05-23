@@ -27,7 +27,7 @@ def updateaccount(request):
         s = get_dbsession(request.session['session_login'])
         stylist = Stylist.objects.get(pk=s['user_pk'])
         account = Account.objects.get(account_holder_id=s['user_pk'])
-        Account.objects.filter(pk=account.pk).update(address='updated')
+
         print("Received cookie session: {}".format(request.session.session_key))
         print("Update session for : {}".format(stylist.first_name))
         print("Account session for: {}".format(account.account_holder))
@@ -36,13 +36,16 @@ def updateaccount(request):
         try:
             firstname = request.POST['firstname']
             lastname = request.POST['lastname']
-            # email = request.POST['email']
-            # password = request.POST['password']
-            # phone_number = request.POST['phone_number']
-            # gender = request.POST['gender']
-            # stylist_type = request.POST['stylist_type']
+            #email = request.POST['email']
+            #password = request.POST['password']
+            phone_number = request.POST['phone_number']
+            gender = request.POST['gender']
+            stylist_type = request.POST['stylist_type']
+            print("Retreived phone number value : {}".format(phone_number))
+            Account.objects.filter(pk=account.pk).update(phone_number=phone_number,
+                                                         gender=gender,
+                                                         stylist_type=stylist_type)
 
-            print("Retrieved from post firstname: {}".format(firstname))
             return render(request, 'usersettings/settingupdated.html', {'stylist': stylist})
 
         except KeyError:
