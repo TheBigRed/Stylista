@@ -69,4 +69,10 @@ def uploadmodule(request):
 
 
 def profile(request):
-    return render(request, 'core/profile.html')
+    if request.session.keys():
+        s = get_dbsession(request.session['session_login'])
+        stylist = Stylist.objects.get(pk=s['user_pk'])
+        request.session.cycle_key()
+        return render(request, 'core/profile.html', {'stylist': stylist})
+    else:
+        return HttpResponseRedirect(reverse('landing:login'))

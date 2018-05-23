@@ -8,7 +8,14 @@
         <link rel="stylesheet" type="text/css" href="{% static 'core/css/styles-profile.css' %}">
     </head>
 <body>
-    <h4>PROFILE PAGE</h4>
+    <div style="height:500px; margin-top:100px;" class="container">
+        <div class="row">
+            <div class="col profile-top-shelf">
+                <h4 class="mt-4 mb-4">{{ stylist.first_name }}</h4>
+            </div>
+        </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>

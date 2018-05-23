@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Shrikhand');
+@import url('https://fonts.googleapis.com/css?family=Raleway:600i');
+
+*{
+
+    border: 1px solid red;
+
+}
+
+h1, h2, h3, h4, h5{
+
+    color: #37474F;
+    font-family: 'Shrikhand', cursive;
+
+}
+
+.profile-top-shelf{
+
+    background-color: #4DB6AC;
+
+}
