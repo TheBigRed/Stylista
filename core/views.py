@@ -66,3 +66,7 @@ def uploadmodule(request):
         form = UploadFileForm()
         return render(request, 'core/upload_module.html', {'uploadform': form})
     return render(request, 'core/upload_module.html', {})
+
+
+def profile(request):
+    return render(request, 'core/profile.html')
