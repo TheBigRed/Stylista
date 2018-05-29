@@ -37,3 +37,15 @@ class Account(models.Model):
 
     #def __str__(self):
         #return self.account_holder
+
+
+class Gallery(models.Model):
+    user = models.ForeignKey(Stylist, models.CASCADE, related_name='user')
+
+    caption = models.CharField(max_length=50, blank=True)
+    upload_time = models.DateTimeField(auto_now_add=True)
+
+    def user_directory_path1(self, picture):
+        return 'user_{0}/gallery/{1}'.format(self.user_id, self.picture.__str__())
+
+    picture = models.ImageField(upload_to=user_directory_path1, default='/user/storefront/gallery.jpg')
