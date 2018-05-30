@@ -16,11 +16,13 @@ class Account(models.Model):
         ('MAKEUP', 'Makeup Artist'),
         ('MUAH', 'Make Up And Hair'),
         ('NAILS', 'Nail Technician'),
+        ('CLIENT', 'Client'),
     )
 
     account_holder = models.ForeignKey(Stylist, models.CASCADE, related_name='account')
-    gender = models.CharField(max_length=25, choices=GENDER, blank=True)
+    store_name = models.CharField(max_length=25, blank=True)
     stylist_type = models.CharField(max_length=25, choices=STYLISTA_TYPES, blank=True)
+    gender = models.CharField(max_length=25, choices=GENDER, blank=True)
     address = models.CharField(max_length=50, blank=True)
     country = models.CharField(max_length=25, blank=True)
     location = models.CharField(max_length=25, blank=True)

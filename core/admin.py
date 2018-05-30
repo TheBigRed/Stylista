@@ -3,7 +3,7 @@ from .models import Account, Gallery
 
 
 class AccountAdmin(admin.ModelAdmin):
-    list_display = ('pk', 'account_holder_id', 'account_holder', 'stylist_type', 'location')
+    list_display = ('pk', 'account_holder_id', 'account_holder', 'store_name', 'stylist_type')
 
 
 class GalleryAdmin(admin.ModelAdmin):
