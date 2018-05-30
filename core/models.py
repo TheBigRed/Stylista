@@ -38,9 +38,12 @@ class Account(models.Model):
     #def __str__(self):
         #return self.account_holder
 
+    # def get_gallery(self):
+    #     return self.gallery_set.all()
+
 
 class Gallery(models.Model):
-    user = models.ForeignKey(Stylist, models.CASCADE, related_name='user')
+    user = models.ForeignKey(Stylist, models.CASCADE)
 
     caption = models.CharField(max_length=50, blank=True)
     upload_time = models.DateTimeField(auto_now_add=True)

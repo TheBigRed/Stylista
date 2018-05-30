@@ -33,36 +33,15 @@
         <div style="background-color:white;" class="row justify-content-center">
             <div class="col-12 col-lg-11">
                 <div id="lightgallery">
-                    <a href="/media/user_9/gallery/gallery-placeholder.jpg">
-                        <img style="height:200px;" src="/media/user_9/gallery/gallery-placeholder.jpg" />
-                    </a>
-                    <a href="/media/user_9/gallery/gallery-placeholder.jpg">
-                        <img style="height:200px;" src="/media/user_9/gallery/gallery-placeholder.jpg" />
-                    </a>
-                    <a href="/media/user_9/gallery/gallery-placeholder.jpg">
-                        <img style="height:200px;" src="/media/user_9/gallery/gallery-placeholder.jpg" />
-                    </a>
-                    <a href="/media/user_9/gallery/gallery-placeholder.jpg">
-                        <img style="height:200px;" src="/media/user_9/gallery/gallery-placeholder.jpg" />
-                    </a>
-                    <a href="/media/user_9/gallery/gallery-placeholder.jpg">
-                        <img style="height:200px;" src="/media/user_9/gallery/gallery-placeholder.jpg" />
-                    </a>
-                    <a href="/media/user_9/gallery/gallery-placeholder.jpg">
-                        <img style="height:200px;" src="/media/user_9/gallery/gallery-placeholder.jpg" />
-                    </a>
-                    <a href="/media/user_9/gallery/gallery-placeholder.jpg">
-                        <img style="height:200px;" src="/media/user_9/gallery/gallery-placeholder.jpg" />
-                    </a>
-                    <a href="/media/user_9/gallery/gallery-placeholder.jpg">
-                        <img style="height:200px;" src="/media/user_9/gallery/gallery-placeholder.jpg" />
-                    </a>
+                    {% for img in imgs %}
+                        <a href={{ img.picture.url }}>
+                            <img style="height:200px;" src={{ img.picture.url }} />
+                        </a>
+                    {% endfor %}
                 </div>
             </div>
         </div>
     </div>
-
-
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>

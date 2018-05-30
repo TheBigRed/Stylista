@@ -1,7 +1,7 @@
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.template import loader
 from django.shortcuts import render
-from core.models import Account
+from core.models import Account, Gallery
 from landing.models import Stylist
 from .forms import UploadFileForm
 from landing.utils import get_dbsession
@@ -16,11 +16,13 @@ def main(request):
     if request.session.keys():
         s = get_dbsession(request.session['session_login'])
         stylist = Stylist.objects.get(pk=s['user_pk'])
+        accounts = Account.objects.filter(stylist_type='BARBER')
+
         print("Received cookie session: {}".format(request.session.session_key))
         request.session.cycle_key()
         #print("Main page received user session: {0}".format(user_session))
         #print("New cookie session {0} with db session value {1}".format(request.session.session_key, request.session['session_login']))
-        return render(request, 'core/main.html', {'stylist': stylist})
+        return render(request, 'core/main.html', {'stylist': stylist, 'accounts': accounts})
     else:
         return HttpResponseRedirect(reverse('landing:login'))
 
@@ -40,8 +42,8 @@ def searchresults(request):
     except KeyError:
         return HttpResponse("Does not Exist")
 
-    template = loader.get_template('core/main.html')
-    context = {}
+    #template = loader.get_template('core/main.html')
+    #context = {}
     #return HttpResponse(template.render(context, request))
     #return render(request, 'core/main.html', {'stylist': stylist})
 
@@ -73,7 +75,16 @@ def profile(request):
         s = get_dbsession(request.session['session_login'])
         stylist = Stylist.objects.get(pk=s['user_pk'])
         account = Account.objects.get(account_holder_id=s['user_pk'])
+        gallery_imgs = Gallery.objects.filter(user_id=s['user_pk'])
+
+        for imgs in gallery_imgs:
+            print(imgs.picture)
+            print(imgs.caption)
+            print(imgs.picture.url)
+
         request.session.cycle_key()
-        return render(request, 'core/profile.html', {'stylist': stylist, 'account': account})
+        return render(request, 'core/profile.html', {'stylist': stylist, 'account': account,
+                                                     'imgs': gallery_imgs})
+
     else:
         return HttpResponseRedirect(reverse('landing:login'))
