@@ -8,5 +8,6 @@ urlpatterns = [
     path('searchresults/', views.searchresults, name='searchresults'),
     path('searchrefined/', views.searchrefined, name='searchrefined'),
     path('upload/', views.uploadmodule, name='uploadmodule'),
-    path('profile/', views.profile, name='profile'),
+    #path('profile/', views.profile, name='profile'),
+    path('profile/<store_front>/', views.profile, name='profile'),
 ]

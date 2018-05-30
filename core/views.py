@@ -70,7 +70,7 @@ def uploadmodule(request):
     return render(request, 'core/upload_module.html', {})
 
 
-def profile(request):
+def profile(request, store_front):
     if request.session.keys():
         s = get_dbsession(request.session['session_login'])
         stylist = Stylist.objects.get(pk=s['user_pk'])

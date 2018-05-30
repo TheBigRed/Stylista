@@ -8,6 +8,10 @@
 pyvenv.cfg
 .venv
 pip-selfcheck.json
-media/user_10/storefront/
+media/user_10/storefront/barber-storefront\.jpg
 
-media/user_9/storefront/
+*.jpg
+
+media/user_9/storefront/hero-storefront\.png
+
+*.pyc
