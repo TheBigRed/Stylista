@@ -104,8 +104,9 @@
                 {% for account in accounts %}
                     <div class="col stylist-card mt-3">
                         <h3 class="text-left">
-                            <a href="{% url 'core:profile' store_front=account.store_name %}">BARBER NAME {% filter force_escape|upper %}{{ account.account_holder.first_name }}{% endfilter %}</a>
+                            <a href="{% url 'core:profile' store_front=account.store_name %}">{% filter force_escape|upper %}{{ account.store_name }}{% endfilter %}</a>
                         </h3>
+                        <h6>{% filter force_escape|upper %}{{ account.account_holder.first_name }} {{ account.account_holder.last_name }}{% endfilter %}</h6>
                         <div>
                             <img style="width:100%; height:300px" class="img-fluid" src={{ account.store_front.url }}/>
                         </div>
