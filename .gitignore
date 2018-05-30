@@ -15,3 +15,5 @@ media/user_10/storefront/barber-storefront\.jpg
 media/user_9/storefront/hero-storefront\.png
 
 *.pyc
+
+\.idea/
