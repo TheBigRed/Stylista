@@ -8,7 +8,7 @@ $(document).ready(function() {
          }
     });
 
-    $("#makeupbtn").button().click(function(){
+    $(".primary-btns").button().click(function(){
 
         var btnValue = $(this).attr("value");
         console.log(btnValue);
@@ -17,14 +17,14 @@ $(document).ready(function() {
         $.ajax({
             type: "GET",
             url: "/core/searchrevolver/",
+            async: false,
             data: serializeData,
             success: function(response) {
-                if(response == "Successful"){
-                    alert("WOOHOO")
-                }
+                $("#ajax-response").html(response);
+
             }
         });
-
+        $(this).addClass('primary-btn-hover');
     });
 
     datepicker();

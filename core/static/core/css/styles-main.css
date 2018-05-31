@@ -124,6 +124,13 @@ a { color: inherit; }
 
 }
 
+.primary-btns-hover{
+
+    color: #455A64;
+    background-color: #81D4FA;
+
+}
+
 .f-datepicker{
 
     background-color: white;
