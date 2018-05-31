@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+    geoFindMe();
+
     $('#search-form').keydown(function(event) {
         if (event.keyCode == 13) {
             //this.form.submit();
@@ -126,5 +128,37 @@ function timepicker(){
 
     });
 
+
+}
+
+function geoFindMe() {
+
+    var output = document.getElementById("map");
+
+    if (!navigator.geolocation){
+        alert("<p>Geolocation is not supported by your browser</p>");
+        return;
+    }
+
+    function success(position) {
+        var latitude  = position.coords.latitude;
+        var longitude = position.coords.longitude;
+
+        //output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
+
+        var img = new Image();
+        img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false";
+
+        output.appendChild(img);
+        $("#map").children('img').addClass('map');
+    }
+
+    function error() {
+        output.innerHTML = "Unable to retrieve your location";
+    }
+
+    //output.innerHTML = "<p>Locating…</p>";
+
+    navigator.geolocation.getCurrentPosition(success, error);
 
 }
