@@ -70,6 +70,18 @@ def uploadmodule(request):
     return render(request, 'core/upload_module.html', {})
 
 
+def stylistsearchmodule(request):
+    try:
+        search = request.GET['btnValue1']
+        location = request.GET['ItemName']
+
+        print("Request recieved {0} and {1}".format(search, location))
+        return HttpResponse("Successful")
+
+    except KeyError:
+        return HttpResponse("Does not Exist")
+
+
 def profile(request, store_front):
     if request.session.keys():
         print("Store name : " + store_front)

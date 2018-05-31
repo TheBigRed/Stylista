@@ -8,6 +8,40 @@ $(document).ready(function() {
          }
     });
 
+    $("#makeupbtn").button().click(function(){
+
+        var btnValue = $(this).attr("value");
+        console.log(btnValue);
+        serializeData = { btnValue1: btnValue, ItemName: 'test' };
+
+        $.ajax({
+            type: "GET",
+            url: "/core/searchrevolver/",
+            data: serializeData,
+            success: function(response) {
+                if(response == "Successful"){
+                    alert("WOOHOO")
+                }
+            }
+        });
+
+    });
+
+    datepicker();
+    timepicker();
+
+});
+
+function buttonRevolver(){
+
+
+
+
+}
+
+
+function datepicker(){
+
     $("#datepicker").flatpickr({
 
         minDate: "today",
@@ -46,6 +80,11 @@ $(document).ready(function() {
         }
 
     });
+
+
+}
+
+function timepicker(){
 
     $("#timepicker").flatpickr({
 
@@ -87,4 +126,5 @@ $(document).ready(function() {
 
     });
 
-});
+
+}
