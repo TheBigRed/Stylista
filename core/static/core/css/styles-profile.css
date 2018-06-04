@@ -59,6 +59,12 @@ h1, h2, h3, h4, h5{
 
 }
 
+.service-grid{
+
+    background-color: #ffffff;
+
+}
+
 .primary-btns{
 
     width:9rem;
@@ -71,5 +77,33 @@ h1, h2, h3, h4, h5{
     -webkit-box-shadow: 0px 0px 23px -10px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 23px -10px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 23px -10px rgba(0,0,0,0.75);
+
+}
+
+.service-item{
+
+   border-bottom : 2px solid #607D8B;
+
+}
+
+.gallery-img{
+
+    height:200px;
+
+}
+
+@media (max-width: 576px) {
+
+    .primary-btns{
+
+        width:7rem;
+
+    }
+
+    .gallery-img{
+
+        height:150px;
+
+    }
 
 }

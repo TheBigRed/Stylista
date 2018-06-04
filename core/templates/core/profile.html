@@ -30,21 +30,27 @@
         <div class="about-me">
             <p class="mt-3 mb-3 text-center"> {{ account.about_me }}</p>
         </div>
-        <div class="container pt-4 pb-4">
-            <div class="row justify-content-center align-items-center mt-2">
-                <div class="col-lg-6">
+        <div class="container pt-4 pb-4 service-grid">
+            <div class="row justify-content-center align-items-center mt-2 service-item">
+                <div class="col-lg-6 col-6">
                     <h4 class="mt-2 mb-2">PROM</h4>
+                    <p class="service-description">Running premium blowjobs</p>
                 </div>
-                <div class="col-lg-3">
-                    <button type="button" class="btn btn-primary primary-btns">BOOK</button>
+                <div class="col-lg-4 col-6">
+                    <span class="ml-1">45min</span>
+                    <span class="ml-1">$80.00+</span>
+                    <button type="button" class="btn btn-primary primary-btns ml-1">BOOK</button>
                 </div>
             </div>
-            <div class="row justify-content-center align-items-center mt-2">
-                <div class="col-lg-6">
-                    <h4 class="mt-2 mb-2">PROM</h4>
+            <div class="row justify-content-center align-items-center mt-2 service-item">
+                <div class="col-lg-6 col-6">
+                    <h4 class="mt-2 mb-2">KOTTAI</h4>
+                    <p class="service-description">Double Penetration</p>
                 </div>
-                <div class="col-lg-3">
-                    <button type="button" class="btn btn-primary primary-btns">BOOK</button>
+                <div class="col-lg-4 col-6">
+                    <span class="ml-1">45min</span>
+                    <span class="ml-1">$80.00+</span>
+                    <button type="button" class="btn btn-primary primary-btns ml-1">BOOK</button>
                 </div>
             </div>
         </div>
@@ -53,7 +59,7 @@
                 <div id="lightgallery">
                     {% for img in imgs %}
                         <a href={{ img.picture.url }}>
-                            <img style="height:200px;" src={{ img.picture.url }} />
+                            <img class="gallery-img" src={{ img.picture.url }} />
                         </a>
                     {% endfor %}
                 </div>
