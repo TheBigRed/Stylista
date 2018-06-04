@@ -1,7 +1,7 @@
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.template import loader
 from django.shortcuts import render
-from core.models import Account, Gallery
+from core.models import Account, Gallery, Service
 from landing.models import Stylist
 from .forms import UploadFileForm
 from landing.utils import get_dbsession

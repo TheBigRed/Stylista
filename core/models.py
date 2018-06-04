@@ -46,7 +46,6 @@ class Account(models.Model):
 
 class Gallery(models.Model):
     user = models.ForeignKey(Stylist, models.CASCADE)
-
     caption = models.CharField(max_length=50, blank=True)
     upload_time = models.DateTimeField(auto_now_add=True)
 
@@ -54,3 +53,14 @@ class Gallery(models.Model):
         return 'user_{0}/gallery/{1}'.format(self.user_id, self.picture.__str__())
 
     picture = models.ImageField(upload_to=user_directory_path1, default='/user/storefront/gallery.jpg')
+
+
+class Service(models.Model):
+    user = models.ForeignKey(Stylist, models.CASCADE)
+    service_name = models.CharField(max_length=50, blank=True)
+    description = models.CharField(max_length=50, blank=True)
+    duration = models.DurationField(blank=True)
+    price = models.DecimalField(max_digits=6, decimal_places=2, blank=True)
+
+
+
