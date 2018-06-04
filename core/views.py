@@ -85,20 +85,11 @@ def stylistsearchmodule(request):
 
 def profile(request, store_front):
     if request.session.keys():
-        print("Store name : " + store_front)
-        s = get_dbsession(request.session['session_login'])
-        stylist = Stylist.objects.get(pk=s['user_pk'])
-        print("User Session: {}".format(stylist.first_name))
+        client_session = get_dbsession(request.session['session_login'])
+        stylist = Stylist.objects.get(pk=client_session['user_pk'])
         account = Account.objects.get(store_name=store_front)
-        gallery_imgs = Gallery.objects.filter(user_id=account.account_holder_id)
-
-        for imgs in gallery_imgs:
-            print(imgs.picture)
-            print(imgs.caption)
-            print(imgs.picture.url)
-
         request.session.cycle_key()
-        return render(request, 'core/profile.html', {'account': account, 'imgs': gallery_imgs})
+        return render(request, 'core/profile.html', {'account': account})
 
     else:
         return HttpResponseRedirect(reverse('landing:login'))
