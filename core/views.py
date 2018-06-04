@@ -78,7 +78,6 @@ def stylistsearchmodule(request):
         print("Search value: " + search)
         accounts = Account.objects.filter(stylist_type=search)
         print("Returned : {}".format(accounts))
-        #return HttpResponse("Successful")
         return render(request, 'core/refined.html', {"accounts": accounts})
     except KeyError:
         return HttpResponse("Does not Exist")
