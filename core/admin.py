@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Account, Gallery, Service
+from .models import Account, Gallery, Service, Contract
 
 
 class AccountAdmin(admin.ModelAdmin):
@@ -14,6 +14,11 @@ class ServiceAdmin(admin.ModelAdmin):
     list_display = ('pk', 'user_id', 'service_name', 'description', 'duration', 'price')
 
 
+class ContractAdmin(admin.ModelAdmin):
+    list_display = ('pk', 'client_id', 'stylist_id', 'date', 'time', 'total_price')
+
+
 admin.site.register(Account, AccountAdmin)
 admin.site.register(Gallery, GalleryAdmin)
 admin.site.register(Service, ServiceAdmin)
+admin.site.register(Contract, ContractAdmin)
