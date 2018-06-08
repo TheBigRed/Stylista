@@ -7,7 +7,7 @@ $(document).ready(function() {
 
     });
 
-    $("#modalopen").click(function(){
+    $("[id^=modalopen]").click(function(){
 
         var serviceName = $(this).parents().eq(1).children().eq(0).children().eq(0).text();
         var serviceDescription = $(this).parents().eq(1).children().eq(0).children().eq(1).text();
