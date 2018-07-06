@@ -7,7 +7,7 @@ from landing.utils import get_dbsession
 from django.urls import reverse
 
 
-def main(request):
+def contract(request):
     '''
     :param request: get request which has user on db session stored in session cookie
     :return: main page with correct user after authenticate session

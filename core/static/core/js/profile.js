@@ -23,4 +23,17 @@ $(document).ready(function() {
         // $('#addBookDialog').modal('show');
     });
 
+    $('#confirm-btn').click(function(){
+
+        form_submit();
+
+    });
+
 });
+
+function form_submit() {
+
+    $('#form-contract').submit();
+
+}
+
