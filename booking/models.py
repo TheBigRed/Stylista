@@ -1,4 +1,5 @@
 from django.db import models
+from landing.models import Stylist
 
 
 class Contract(models.Model):
