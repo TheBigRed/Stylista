@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'landing.apps.LandingConfig',
     'core.apps.CoreConfig',
     'usersettings.apps.UsersettingsConfig',
+    'booking.apps.BookingConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
