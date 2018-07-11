@@ -14,10 +14,10 @@ $(document).ready(function() {
         var time = $(this).parents().eq(0).children().eq(0).text();
         var price = $(this).parents().eq(0).children().eq(1).text();
         console.log(serviceName);
-        $('#jservice').text(serviceName);
-        $('#jdesc').text(serviceDescription);
-        $('#jtime').text(time);
-        $('#jprice').text(price);
+        $('#jservice').append(serviceName);
+        $('#jdesc').append(serviceDescription);
+        $('#jtime').append(time);
+        $('#jprice').append(price);
 
         // it is superfluous to have to manually call the modal.
         // $('#addBookDialog').modal('show');
