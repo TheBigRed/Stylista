@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Shrikhand');
+@import url('https://fonts.googleapis.com/css?family=Raleway:600i');
+
+
+*{
+
+    border: 1px solid red;
+
+}
+
+h1, h2, h3, h4, h5{
+
+    color: #37474F;
+    font-family: 'Shrikhand', cursive;
+
+}
+
+.font-raleway{
+
+    font-family: "Raleway", sans-serif;
+
+}
+
+.itinerary-card{
+
+   background-color: #4DB6AC;
+
+}
+
+.row-subcard{
+
+   background-color: #E0F2F1;
+
+}
+
+.col-subcard{
+
+    background-color: #FFFFFF;
+
+}
