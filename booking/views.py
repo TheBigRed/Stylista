@@ -12,4 +12,4 @@ def contract(request):
     :param request: get request which has user on db session stored in session cookie
     :return: main page with correct user after authenticate session
     '''
-    return HttpResponse("Booking Main")
+    return render(request, 'booking/itinerary.html')
