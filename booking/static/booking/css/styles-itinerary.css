@@ -1,17 +1,35 @@
 @import url('https://fonts.googleapis.com/css?family=Shrikhand');
 @import url('https://fonts.googleapis.com/css?family=Raleway:600i');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,500');
 
-
+/*
 *{
 
     border: 1px solid red;
 
+}*/
+
+*{
+    box-sizing: border-box;
 }
 
 h1, h2, h3, h4, h5{
 
     color: #37474F;
-    font-family: 'Shrikhand', cursive;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+hr{
+
+    margin-top: 3rem;
+
+}
+
+p{
+
+    font-weight: 300;
+    line-height: 1;
 
 }
 
@@ -21,20 +39,64 @@ h1, h2, h3, h4, h5{
 
 }
 
+.font-shrikhand{
+
+    font-family: 'Shrikhand', cursive;
+    letter-spacing: .5rem;
+}
+
 .itinerary-card{
 
-   background-color: #4DB6AC;
+    margin-top:100px;
+    background-color: #4DB6AC;
+    border-radius: 7px 7px 7px 7px;
+    -moz-border-radius: 7px 7px 7px 7px;
+    -webkit-border-radius: 7px 7px 7px 7px;
+    box-shadow: 0 1px 1px 0 rgba(60,64,67,.08),0 1px 3px 1px rgba(60,64,67,.16);
+}
+
+.itinerary-body{
+
+    background-color: #E0F2F1;
 
 }
 
-.row-subcard{
 
-   background-color: #E0F2F1;
+.itinerary-subbody{
+
+    padding: 0;
+    background-color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0 1px 1px 0 rgba(60,64,67,.08),0 1px 3px 1px rgba(60,64,67,.16);
+    border-radius: 7px 7px 7px 7px;
+    -moz-border-radius: 7px 7px 7px 7px;
+    -webkit-border-radius: 7px 7px 7px 7px;
 
 }
 
 .col-subcard{
 
     background-color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+}
 
+.total-bg{
+
+    background-color: #E0F2F1;
+
+}
+
+@media (max-width: 576px) {
+
+    .itinerary-card{
+
+        margin-top: 0;
+
+    }
+
+    .itinerary-body{
+
+        padding: .5rem;
+
+    }
 }
