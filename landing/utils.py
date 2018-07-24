@@ -11,8 +11,8 @@ def create_session(request, user_pk):
     print('Created cookie session key: {0}'.format(request.session.session_key))
 
 
-def get_dbsession(cookie_session):
-    s = SessionStore(session_key=cookie_session)
+def get_dbsession(request_session):
+    s = SessionStore(session_key=request_session)
     return s
 
 '''CREATE CUSTOM COOKIE'''
