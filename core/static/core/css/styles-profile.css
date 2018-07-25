@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Shrikhand');
 @import url('https://fonts.googleapis.com/css?family=Raleway:600i');
 
-*{
+body{
 
-    border: 1px solid red;
+    background-color: #FAFAFA;
 
 }
 
@@ -22,27 +22,40 @@ h1, h2, h3, h4, h5{
 
 .profile-card{
 
-    background-color: #B2DFDB;
+    background-color: #4DB6AC;
     border-radius: 7px 7px 7px 7px;
     -moz-border-radius: 7px 7px 7px 7px;
     -webkit-border-radius: 7px 7px 7px 7px;
-    border: 0px solid #000000;
-    -webkit-box-shadow: 0px 0px 23px -10px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 23px -10px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 23px -10px rgba(0,0,0,0.75);
+    box-shadow: 0 1px 1px 0 rgba(60,64,67,.08),0 1px 3px 1px rgba(60,64,67,.16);
 
 }
 
-.profile-top-shelf{
+.profile-header{
 
     background-color: #4DB6AC;
 
 }
 
-.profile-bottom-shelf{
+.profile-subheader{
 
-    background-color: #B2DFDB;
+    background-color: #FFFFFF;
     color: #455A64;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0 1px 1px 0 rgba(60,64,67,.08),0 1px 3px 1px rgba(60,64,67,.16);
+    border-radius: 7px 7px 7px 7px;
+    -moz-border-radius: 7px 7px 7px 7px;
+    -webkit-border-radius: 7px 7px 7px 7px;
+
+}
+
+.img-container{
+
+    padding: 0;
+    box-shadow: 0 1px 1px 0 rgba(60,64,67,.08),0 1px 3px 1px rgba(60,64,67,.16);
+    border-radius: 7px 7px 7px 7px;
+    -moz-border-radius: 7px 7px 7px 7px;
+    -webkit-border-radius: 7px 7px 7px 7px;
+
 }
 
 .img-storefront{
@@ -50,39 +63,75 @@ h1, h2, h3, h4, h5{
     width:100%;
     height:300px;
     object-fit:cover;
+    border-radius: 7px 7px 7px 7px;
+    -moz-border-radius: 7px 7px 7px 7px;
+    -webkit-border-radius: 7px 7px 7px 7px;
 
 }
 
 .about-me{
 
-
+    background-color: #ffffff;
+    box-shadow: 0 1px 1px 0 rgba(60,64,67,.08),0 1px 3px 1px rgba(60,64,67,.16);
+    border-radius: 7px 7px 7px 7px;
+    -moz-border-radius: 7px 7px 7px 7px;
+    -webkit-border-radius: 7px 7px 7px 7px;
 
 }
 
 .service-grid{
 
     background-color: #ffffff;
+    box-shadow: 0 1px 1px 0 rgba(60,64,67,.08),0 1px 3px 1px rgba(60,64,67,.16);
+    border-radius: 7px 7px 7px 7px;
+    -moz-border-radius: 7px 7px 7px 7px;
+    -webkit-border-radius: 7px 7px 7px 7px;
 
 }
 
 .primary-btns{
 
-    width:9rem;
-    background-color: #80CBC4;
+    width:8rem;
+    background-color: #90A4AE;
     font-family: 'Shrikhand', cursive;
-    color: #455A64;
-    border-radius: 0;
+    color: #EAEAEA;
+    font-size: 1.25rem;
     border: none;
-    font-size: 1rem;
-    -webkit-box-shadow: 0px 0px 23px -10px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 23px -10px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 23px -10px rgba(0,0,0,0.75);
+    box-shadow: 0 1px 1px 0 rgba(60,64,67,.08),0 1px 3px 1px rgba(60,64,67,.16);
+    border-radius: 7px 7px 7px 7px;
+    -moz-border-radius: 7px 7px 7px 7px;
+    -webkit-border-radius: 7px 7px 7px 7px;
 
 }
 
-.service-item{
+.primary-btns:hover{
 
-   border-bottom : 2px solid #607D8B;
+    background-color: #546E7A;
+
+}
+
+.service-item-desc{
+
+    /*background-color: #E0F2F1;*/
+
+}
+
+.service-price{
+
+    background-color: #E0F2F1;
+    border-radius: 7px 7px 7px 7px;
+    -moz-border-radius: 7px 7px 7px 7px;
+    -webkit-border-radius: 7px 7px 7px 7px;
+
+}
+
+.gallery-container{
+
+    background-color: #FFFFFF;
+    border-radius: 7px 7px 7px 7px;
+    -moz-border-radius: 7px 7px 7px 7px;
+    -webkit-border-radius: 7px 7px 7px 7px;
+    box-shadow: 0 1px 1px 0 rgba(60,64,67,.08),0 1px 3px 1px rgba(60,64,67,.16);
 
 }
 
