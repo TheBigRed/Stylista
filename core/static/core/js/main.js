@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    geoFindMe();
+    //geoFindMe();
 
     $('#search-form').keydown(function(event) {
         if (event.keyCode == 13) {
