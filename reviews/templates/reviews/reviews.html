@@ -1,11 +1,26 @@
-<!DOCTYPE html>
 {% load static %}
-<html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    </head>
-<body>
-    <h1>REVIEW PAGE</h1>
-
-</body>
-</html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="{% static 'reviews/css/styles.css' %}">
+<div class="container review-container">
+    <div class="row">
+        <div class="col py-3">
+            <h1 class="text-center font-shrikhand">REVIEWS</h1>
+        </div>
+    </div>
+    <div class="row justify-content-center" style="background-color: #FFFFFF">
+        {% for r in reviews_list %}
+        <div class="col-8">
+            <div class="row">
+                <div style="height:50px;" class="col-lg-2 col-2">
+                    <img style="height:100%;" class="img-fluid" src="{% static 'core/imgs/main/account_icon.svg' %}">
+                </div>
+                <div class="col-lg-10 col-10">
+                    <h3>{{ r.title }}</h3>
+                    <p>{{ r.review }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
