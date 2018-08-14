@@ -12,6 +12,19 @@ body{
 h1, h2, h3, h4, h5{
 
     color: #37474F;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+hr:last-child{
+
+    color: red;
+
+}
+
+p{
+
+    font-weight: 300;
 
 }
 
@@ -19,16 +32,37 @@ h1, h2, h3, h4, h5{
 
     font-family: 'Shrikhand', cursive;
     letter-spacing: .5rem;
+
 }
 
 .review-container{
 
-    margin-top: 200px;
+    margin-top: 150px;
     width: 700px;
     background-color: #4DB6AC;
     border-radius: 7px 7px 7px 7px;
     -moz-border-radius: 7px 7px 7px 7px;
     -webkit-border-radius: 7px 7px 7px 7px;
     box-shadow: 0 1px 1px 0 rgba(60,64,67,.08),0 1px 3px 1px rgba(60,64,67,.16);
+
+}
+
+.avatar-col{
+
+    padding: 0
+
+}
+
+.star-rating {
+
+    font-size: 1.25rem;
+    color: #4DB6AC;
+    display: inline-block;
+    overflow: hidden;
+
+}
+.star-rating::before {
+
+    content: "★★★★★"
 
 }
