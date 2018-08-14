@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Review
 
+
 def reviews(request):
     '''
     :param request: reviews
@@ -12,3 +13,12 @@ def reviews(request):
         print("Review Name: {}".format(r.title))
 
     return render(request, 'reviews/reviews.html', {'reviews_list': reviews_list})
+
+
+def comment(request):
+    '''
+    :param request: reviews
+    :return: page with reviews for Stylist
+    '''
+
+    return render(request, 'reviews/leavecomment.html')
