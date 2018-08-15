@@ -12,14 +12,14 @@ $(document).ready(function() {
 
     }
 
-    //removeHR();
+    removeHR();
 
 });
 
 
-function rating(stars, cw, starElem) {
+function rating(datVal, cw, starElem) {
 
-    starElem.style.width = Math.round(cw * (stars / 5)) + 'px';
+    starElem.style.width = Math.round(cw * (datVal / 5)) + 'px';
 
 }
 

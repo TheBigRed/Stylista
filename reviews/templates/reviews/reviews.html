@@ -1,4 +1,5 @@
 {% load static %}
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="{% static 'reviews/css/styles-reviews.css' %}">
@@ -8,7 +9,7 @@
             <h1 class="text-center font-shrikhand" style="margin:0;">REVIEWS</h1>
         </div>
     </div>
-    <div class="row justify-content-center py-4" style="background-color: #FFFFFF">
+    <div class="row justify-content-center py-5" style="background-color: #FFFFFF">
         {% for r in reviews_list %}
         <div class="col-10 py-2">
             <div class="row justify-content-center">
@@ -20,6 +21,7 @@
                     <p class="d-inline ml-2" style="font-weight:500; color:#546E7A">({{ r.date }})</p>
                 </div>
                 <div class="col-lg-3 col-3 py-2" align="left">
+                    <div id="rating2" class="bg-star-rating"></div>
                     <div id="rating1" class="star-rating" data-value="{{ r.rating }}"></div>
                 </div>
             </div>
@@ -28,8 +30,9 @@
                     <p>{{ r.review }}</p>
                 </div>
             </div>
-            <hr>
+            <!--<hr class="my-4">  PREVIOUS POSITION -->
         </div>
+        <hr style="width:85%;" class="my-4">
         {% endfor %}
     </div>
 </div>
