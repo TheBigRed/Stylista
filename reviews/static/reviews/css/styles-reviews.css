@@ -82,3 +82,16 @@ p{
     content: "★★★★★"
 
 }
+
+.help-button{
+
+    color: #4DB6AC;
+
+}
+
+.help-button:hover{
+
+    cursor: pointer;
+    color: #00796B;
+
+}

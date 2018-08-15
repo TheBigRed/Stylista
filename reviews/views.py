@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 from .models import Review
 
@@ -22,3 +23,12 @@ def comment(request):
     '''
 
     return render(request, 'reviews/leavecomment.html')
+
+
+def upvote(request):
+    '''
+    :param request: reviews
+    :return: page with reviews for Stylist
+    '''
+    print("Received request from review app")
+    return HttpResponse(200)
