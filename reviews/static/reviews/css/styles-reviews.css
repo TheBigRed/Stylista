@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Shrikhand');
 @import url('https://fonts.googleapis.com/css?family=Raleway:600i');
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,500');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
 
 
 body{
@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5{
 
     color: #37474F;
     font-family: 'Roboto', sans-serif;
-
+    font-weight: 400;
 }
 
 hr > :last-child{
@@ -24,15 +24,16 @@ hr > :last-child{
 
 p{
 
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
 
 }
 
-.font-shrikhand{
 
-    font-family: 'Shrikhand', cursive;
-    letter-spacing: .5rem;
+.font-roboto{
 
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
 }
 
 .review-container{
@@ -46,6 +47,7 @@ p{
     box-shadow: 0 1px 1px 0 rgba(60,64,67,.08),0 1px 3px 1px rgba(60,64,67,.16);
 
 }
+
 
 .avatar-col{
 
