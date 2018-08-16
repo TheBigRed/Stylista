@@ -40,7 +40,9 @@ function helpfulAjaxCall(){
 
         //var btnValue = $('help-button').text();
         var btnValue = $(this).text();
-        serializeData = { vote: btnValue };
+        var msgID = $(this).parent().attr('data-value');
+
+        serializeData = { vote: btnValue, id: msgID };
         csrftoken = getCookie('csrftoken');
 
         $.ajaxSetup({

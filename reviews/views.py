@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.db.models import F
 from .models import Review
 
 
@@ -30,5 +31,11 @@ def upvote(request):
     :param request: reviews
     :return: page with reviews for Stylist
     '''
-    print("Received request from review app")
+
+    vote = request.POST['vote']
+    msg_id = request.POST['id']
+
+    review = Review.objects.filter(pk=msg_id).update(helpful_count=F('helpful_count') + 1)
+
+    print("MSG ID: " + msg_id)
     return HttpResponse(200)
