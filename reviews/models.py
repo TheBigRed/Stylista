@@ -17,3 +17,12 @@ class Review(models.Model):
 
     def __str__(self):
         return self.title
+
+    def update_vote(self, vote):
+        if vote == 'Yes':
+            self.helpful_count += 1
+            self.helpful_total_count += 1
+
+        elif vote == 'No':
+            self.unhelpful_count += 1
+            self.helpful_total_count += 1

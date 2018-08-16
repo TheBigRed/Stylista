@@ -35,7 +35,11 @@ def upvote(request):
     vote = request.POST['vote']
     msg_id = request.POST['id']
 
-    review = Review.objects.filter(pk=msg_id).update(helpful_count=F('helpful_count') + 1)
+    #review = Review.objects.filter(pk=msg_id).update(helpful_count=F('helpful_count') + 1)
+    review = Review.objects.get(pk=msg_id)
+    review.update_vote(vote)
+    review.save()
+
 
     print("MSG ID: " + msg_id)
     return HttpResponse(200)
