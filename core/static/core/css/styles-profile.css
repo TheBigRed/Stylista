@@ -22,6 +22,7 @@ h1, h2, h3, h4, h5{
 
 .profile-card{
 
+    overflow: hidden;
     background-color: #4DB6AC;
     border-radius: 7px 7px 7px 7px;
     -moz-border-radius: 7px 7px 7px 7px;

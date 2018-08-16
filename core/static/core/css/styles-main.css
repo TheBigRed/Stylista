@@ -83,6 +83,7 @@ a { color: inherit; }
 
 .main-container{
 
+    overflow: hidden;
     background-color: #4DB6AC;
     border: 1px;
     border-radius: 7px 7px 7px 7px;
