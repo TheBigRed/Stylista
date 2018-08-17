@@ -13,8 +13,6 @@ h1, h2, h3, h4, h5{
 
 }
 
-}
-
 p{
 
     font-family: 'Roboto', sans-serif;
@@ -96,7 +94,7 @@ p{
 
     width:7.5rem;
     background-color: #90A4AE;
-    font-family: 'Shrikhand', cursive;
+    font-family: 'Roboto', sans-serif;
     color: #EAEAEA;
     font-size: 1.25rem;
     border: none;
