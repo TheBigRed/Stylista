@@ -34,7 +34,7 @@ class Account(models.Model):
         #print("Saved user " + self.account_holder + " AND " + self.acount_holder_id)
         return 'user_{0}/storefront/{1}'.format(self.account_holder_id, self.store_front.__str__())
 
-    store_front = models.ImageField(upload_to=user_directory_path, default='/user/storefront/upload.jpg')
+    store_front = models.ImageField(upload_to=user_directory_path, default='/user/storefront/default-storefront.jpg')
     #store_front = models.ImageField(upload_to='kottai/test', default='/user/storefront/upload.jpg')
 
     #def __str__(self):
@@ -52,7 +52,7 @@ class Gallery(models.Model):
     def user_directory_path1(self, picture):
         return 'user_{0}/gallery/{1}'.format(self.user_id, self.picture.__str__())
 
-    picture = models.ImageField(upload_to=user_directory_path1, default='/user/storefront/gallery.jpg')
+    picture = models.ImageField(upload_to=user_directory_path1, default='/user/gallery/gallery.jpg')
 
 
 class Service(models.Model):
