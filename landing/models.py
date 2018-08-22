@@ -23,7 +23,7 @@ class Client(User):
     city = models.CharField(max_length=25, blank=True)
     country = models.CharField(max_length=25, blank=True)
     location = models.CharField(max_length=25, blank=True)
-    phone_number = models.PositiveIntegerField(validators=[RegexValidator(regex='^\+?[1-9]\d{1,14}$')], null=True)
+    phone_number = models.CharField(validators=[RegexValidator(regex='^\+?[1-9]\d{1,14}$')], max_length=15, null=True)
 
     def __str__(self):
         return self.acc_test_fn + self.acc_test_ln
