@@ -46,7 +46,7 @@ class Stylista(models.Model):
     )
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    vendor_id = models.UUIDField(default=uuid.uuid4, editable=False)
+    business_id = models.UUIDField(default=uuid.uuid4, editable=False)
     stylist_type = models.CharField(max_length=25, choices=STYLISTA_TYPES, blank=True)
     about_me = models.TextField(blank=True)
     business_name = models.CharField(max_length=20, blank=True)
@@ -76,5 +76,5 @@ class Stylista(models.Model):
         return self.user.first_name + self.user.last_name
 
     class Meta:
-        verbose_name = 'Vendor'
-        verbose_name_plural = 'Clients'
+        verbose_name = 'Stylista'
+        verbose_name_plural = 'Stylistas'
