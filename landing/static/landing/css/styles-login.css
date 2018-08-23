@@ -1,9 +1,23 @@
+body{
+
+    background-color: #FAFAFA;
+
+}
+
 .form-container{
 
-    max-width: 500px;
-    margin-top: 200px;
-    background-color: #1DE9B6;
-    padding-top: 50px;
-    padding-bottom: 25px;
+    background-color: #4DB6AC;
+    border-radius: 7px 7px 7px 7px;
+    -moz-border-radius: 7px 7px 7px 7px;
+    -webkit-border-radius: 7px 7px 7px 7px;
+    box-shadow: 0 1px 1px 0 rgba(60,64,67,.08),0 1px 3px 1px rgba(60,64,67,.16);
+
+}
+
+.form-cards{
+
+    border-radius: 7px 7px 7px 7px;
+    -moz-border-radius: 7px 7px 7px 7px;
+    -webkit-border-radius: 7px 7px 7px 7px;
 
 }

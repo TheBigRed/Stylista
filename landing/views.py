@@ -7,6 +7,8 @@ from datetime import datetime
 from django.urls import reverse
 from django.core.exceptions import ObjectDoesNotExist
 from core.models import Account
+from django.contrib.auth.models import User
+from .forms import LoginForm
 from landing.utils import create_session
 from django.contrib.sessions.backends.db import SessionStore
 
@@ -14,6 +16,12 @@ from django.contrib.sessions.backends.db import SessionStore
 def index(request):
     template = loader.get_template('landing/index.html')
     context = {}
+
+    user_client = User.objects.get(username='test_user')
+    client_address = user_client.client.address
+    print("User name {}".format(user_client.first_name + user_client.last_name))
+    print("User address {}".format(client_address))
+
     return HttpResponse(template.render(context, request))
 
 
@@ -79,22 +87,32 @@ def authenticate(request):
     :param request: receive form data login
     :return: redirect to page main page after login
     """
-    try:
-        email = request.POST['email']
-        password = request.POST['password']
-        stylista = Stylist.objects.get(email=email, password=password)
-        user_firstname = stylista.first_name
-        if stylista:
-            #return HttpResponseRedirect(reverse('landing:account', args=(stylista,)))
-            print("Authenticated : " + user_firstname)
-            create_session(request, stylista.pk)
+
+    if request.method == 'POST':
+        form = LoginForm(request.POST)
+        if form.is_valid():
             return HttpResponseRedirect(reverse('core:main'))
 
-    except ObjectDoesNotExist:
-        #return redirect('core:main')
-        #raise Http404("Please sign up")
-        return HttpResponse("Please SIGN UP")
+    else:
+        form = LoginForm
 
+    return render(request, 'landing/login.html', {'form': form})
+
+    # try:
+    #     email = request.POST['email']
+    #     password = request.POST['password']
+    #     stylista = Stylist.objects.get(email=email, password=password)
+    #     user_firstname = stylista.first_name
+    #     if stylista:
+    #         #return HttpResponseRedirect(reverse('landing:account', args=(stylista,)))
+    #         print("Authenticated : " + user_firstname)
+    #         create_session(request, stylista.pk)
+    #         return HttpResponseRedirect(reverse('core:main'))
+    #
+    # except ObjectDoesNotExist:
+    #     #return redirect('core:main')
+    #     #raise Http404("Please sign up")
+    #     return HttpResponse("Please SIGN UP")
 
 
 def account(request, kottai):
@@ -110,7 +128,15 @@ def login(request):
     :param request: none
     :return: about site page
     """
-    return render(request, 'landing/login.html')
+    form = LoginForm
+
+    context = {
+
+        'form': form
+
+    }
+
+    return render(request, 'landing/login.html', context)
 
 
 def thankyou(request, fullname):
