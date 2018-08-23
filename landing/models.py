@@ -50,7 +50,7 @@ class Stylista(models.Model):
     stylist_type = models.CharField(max_length=25, choices=STYLISTA_TYPES, blank=True)
     about_me = models.TextField(blank=True)
     business_name = models.CharField(max_length=20, blank=True)
-    services = JSONField()
+    services = JSONField(blank=True, null=True)
     address = models.CharField(max_length=50, blank=True)
     business_address = models.CharField(max_length=50, blank=True)
     zip_code = models.CharField(max_length=8, blank=True)
