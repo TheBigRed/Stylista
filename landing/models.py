@@ -15,15 +15,14 @@ class Stylist(models.Model):
         return self.first_name
 
 
-class Client(User):
-    user = models.OneToOneField(User, parent_link=True, on_delete=models.CASCADE)
-    #client_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+class Client(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     address = models.CharField(max_length=50, blank=True)
     zip_code = models.CharField(max_length=20, default='')
     city = models.CharField(max_length=25, blank=True)
     country = models.CharField(max_length=25, blank=True)
     location = models.CharField(max_length=25, blank=True)
-    phone_number = models.CharField(validators=[RegexValidator(regex='^\+?[1-9]\d{1,14}$')], max_length=15, null=True)
+    phone_number = models.PositiveIntegerField(validators=[RegexValidator(regex='^\+?[1-9]\d{1,14}$')], null=True)
 
     def __str__(self):
         return self.acc_test_fn + self.acc_test_ln

@@ -7,7 +7,7 @@ class StylistaAdmin(admin.ModelAdmin):
 
 
 class ClientAdmin(admin.ModelAdmin):
-    list_display = ('pk', 'first_name', 'address', 'email', 'password')
+    list_display = ('pk', 'zip_code', 'address')
 
 
 admin.site.register(Stylist, StylistaAdmin)
