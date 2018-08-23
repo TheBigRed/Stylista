@@ -9,7 +9,7 @@
     </head>
 <body>
     <section>
-        <div class="container form-container mt-5 py-5">
+        <div class="container form-container py-5" style="margin-top: 200px;"><!--
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-12 p-5 form-cards" style="background-color: #FFFFFF;">
                     <form action="{% url 'landing:authenticate' %}" method="post">
@@ -26,18 +26,21 @@
                         <button type="submit" class="btn btn-primary">LOGIN</button>
                     </form>
                 </div>
-            </div>
-            <div class="row justify-content-center mt-5">
+            </div>-->
+            <div class="row justify-content-center">
                 <div class="col-lg-8 col-12 p-5 form-cards" style="background-color: #FFFFFF;">
                     <form action="{% url 'landing:authenticate' %}" method="post">
                         {% csrf_token %}
                         {% for field in form.visible_fields %}
                             <div class="form-group">
-                                {{field.label_tag}}
-                                {{field}}
+                                <div class="mx-auto">
+                                    {{field.label_tag}}
+                                    {{field}}
+                                </div>
                             </div>
                         {% endfor %}
-                        <button type="submit" class="btn btn-primary">LOGIN</button>
+                        <button type="submit" class="btn btn-primary btn-login my-2">LOGIN</button>
+                        <p class="mt-3" style="font-weight:500;">Forgot your password? Click <a href="#">Here</a> to reset it.</p>
                     </form>
                 </div>
             </div>

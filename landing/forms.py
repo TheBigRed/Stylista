@@ -7,7 +7,8 @@ class LoginForm(ModelForm):
 
     class Meta:
         model = User
-        fields = ('username', 'last_name')
+        fields = ('username', 'password')
         widgets = {
-            'username': TextInput(attrs={'class': 'form-control'}),
+            'username': TextInput(attrs={'class': 'form-control input-login'}),
+            'password': TextInput(attrs={'class': 'form-control input-login'}),
         }

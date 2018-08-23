@@ -1,11 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,500');
+
+
 body{
 
-    background-color: #FAFAFA;
+    /*background-color: #FAFAFA;*/
+    background-image: url('../imgs/login/aurora.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+label, p{
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
 
 }
 
 .form-container{
 
+    width:700px;
     background-color: #4DB6AC;
     border-radius: 7px 7px 7px 7px;
     -moz-border-radius: 7px 7px 7px 7px;
@@ -16,6 +32,27 @@ body{
 
 .form-cards{
 
+    border-radius: 7px 7px 7px 7px;
+    -moz-border-radius: 7px 7px 7px 7px;
+    -webkit-border-radius: 7px 7px 7px 7px;
+    box-shadow: 0 1px 1px 0 rgba(60,64,67,.08),0 1px 3px 1px rgba(60,64,67,.16);
+}
+
+.input-login{
+
+
+
+}
+
+.btn-login{
+
+    width:7.5rem;
+    background-color: #4DB6AC;
+    font-family: 'Roboto', sans-serif;
+    color: #EAEAEA;
+    font-size: 1.25rem;
+    border: none;
+    box-shadow: 0 1px 1px 0 rgba(60,64,67,.08),0 1px 3px 1px rgba(60,64,67,.16);
     border-radius: 7px 7px 7px 7px;
     -moz-border-radius: 7px 7px 7px 7px;
     -webkit-border-radius: 7px 7px 7px 7px;
