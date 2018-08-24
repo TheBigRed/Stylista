@@ -12,6 +12,13 @@ body{
 
 }
 
+h1, h2, h3, h4, h5{
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+
+}
+
 label, p, input{
 
     font-family: 'Roboto', sans-serif;
@@ -33,7 +40,7 @@ label, p, input{
 .input-login[type="text"]{
 
     font-size: 1.25rem;
-    box-shadow: 0 1px 1px 0 rgba(60,64,67,.08),0 1px 3px 1px rgba(60,64,67,.16);
+    /*box-shadow: 0 1px 1px 0 rgba(60,64,67,.08),0 1px 3px 1px rgba(60,64,67,.16);*/
 
 }
 
@@ -46,11 +53,11 @@ label, p, input{
 
 .btn-login{
 
-    width:7.5rem;
+    width: 100%;
     background-color: #4DB6AC;
     font-family: 'Roboto', sans-serif;
-    color: #EAEAEA;
-    font-size: 1.25rem;
+    color: #FCFCFC;
+    font-size: 1rem;
     border: none;
     box-shadow: 0 1px 1px 0 rgba(60,64,67,.08),0 1px 3px 1px rgba(60,64,67,.16);
     border-radius: 7px 7px 7px 7px;
