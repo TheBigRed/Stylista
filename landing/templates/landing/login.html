@@ -9,7 +9,7 @@
     </head>
 <body>
     <section>
-        <div class="container form-container py-5" style="margin-top: 200px;"><!--
+        <div class="container form-container py-4" style="margin-top: 200px;"><!--
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-12 p-5 form-cards" style="background-color: #FFFFFF;">
                     <form action="{% url 'landing:authenticate' %}" method="post">
@@ -28,7 +28,7 @@
                 </div>
             </div>-->
             <div class="row justify-content-center">
-                <div class="col-lg-8 col-12 p-5 form-cards" style="background-color: #FFFFFF;">
+                <div class="col-12 p-5">
                     <form action="{% url 'landing:authenticate' %}" method="post">
                         {% csrf_token %}
                         {% for field in form.visible_fields %}
@@ -40,7 +40,7 @@
                             </div>
                         {% endfor %}
                         <button type="submit" class="btn btn-primary btn-login my-2">LOGIN</button>
-                        <p class="mt-3" style="font-weight:500;">Forgot your password? Click <a href="#">Here</a> to reset it.</p>
+                        <p class="mt-3" style="font-weight:500; color: #90A4AE;">Forgot your password? Click <a href="#" style="color: #4DB6AC;">Here</a> to reset it.</p>
                     </form>
                 </div>
             </div>
