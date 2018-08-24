@@ -8,7 +8,7 @@ from django.urls import reverse
 from django.core.exceptions import ObjectDoesNotExist
 from core.models import Account
 from django.contrib.auth.models import User
-from .forms import LoginForm
+from .forms import LoginForm, SignUpForm
 from landing.utils import create_session
 from django.contrib.sessions.backends.db import SessionStore
 
@@ -37,21 +37,34 @@ def stylist(request, stylist_id):
     return render(request, 'landing/stylist.html', {'stylist': stylist_obj})
 
 
-def name(request):
-    """
-    :param request: name
-    :return: list of stylists in database
-    """
-    name_styl = Stylist.objects.order_by('-joined_date')
-    return HttpResponse(name_styl)
-
-
 def signup(request):
     """
     :param request: singup
     :return: form to signup for account
     """
-    return render(request, 'landing/signup.html')
+    form = SignUpForm()
+    context = {
+
+        'form': form
+
+    }
+
+    return render(request, 'landing/signup.html', context)
+
+
+def login(request):
+    """
+    :param request: none
+    :return: about site page
+    """
+    form = LoginForm
+    context = {
+
+        'form': form
+
+    }
+
+    return render(request, 'landing/login.html', context)
 
 
 def newuser(request):
@@ -91,6 +104,7 @@ def authenticate(request):
     if request.method == 'POST':
         form = LoginForm(request.POST)
         if form.is_valid():
+            create_session(request, 10)
             return HttpResponseRedirect(reverse('core:main'))
 
     else:
@@ -123,28 +137,12 @@ def account(request, kottai):
     return render(request, 'landing/account.html', {'email': kottai})
 
 
-def login(request):
-    """
-    :param request: none
-    :return: about site page
-    """
-    form = LoginForm
-
-    context = {
-
-        'form': form
-
-    }
-
-    return render(request, 'landing/login.html', context)
-
-
-def thankyou(request, fullname):
+def thankyou(request):
     """
     :param request: get full name of user who signed up
     :return: thank you for signing up page
     """
-    return render(request, 'landing/thankyou.html', {'fullname': fullname})
+    return render(request, 'landing/thankyou.html')
 
 
 def about(request):

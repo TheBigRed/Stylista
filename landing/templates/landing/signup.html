@@ -8,6 +8,31 @@
         <link rel="stylesheet" type="text/css" href="{% static 'landing/css/styles-signup.css' %}">
     </head>
 <body>
+<section>
+        <div class="container form-container py-4">
+            <div class="row justify-content-center p-5">
+                <h3 class="mb-4">CREATE AN ACCOUNT</h3>
+                <div class="col-12">
+                    <form action="{% url 'landing:thankyou' %}" method="post">
+                        {% csrf_token %}
+                        {% for field in form.visible_fields %}
+                            <div class="form-group">
+                                <div class="mx-auto">
+                                    {{field.label_tag}}
+                                    {{field}}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <button type="submit" class="btn btn-primary btn-login mt-4 py-3">SIGN UP</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+<!--
     <div class="container form-container">
         <form action="{% url 'landing:newuser' %}" method="post">
             {% csrf_token %}
@@ -36,5 +61,4 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
-</body>
-</html>
+-->
