@@ -51,6 +51,17 @@ label, p, input{
 
 }
 
+input[type=checkbox]
+{
+
+    margin-left: 5px;
+    -ms-transform: scale(1.4); /* IE */
+    -moz-transform: scale(1.4); /* FF */
+    -webkit-transform: scale(1.4); /* Safari and Chrome */
+    -o-transform: scale(1.4); /* Opera */
+
+}
+
 .btn-login{
 
     width: 100%;

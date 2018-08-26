@@ -5,6 +5,9 @@ from django.contrib.auth.models import User
 
 
 class LoginForm(ModelForm):
+    remember_me = forms.BooleanField(label='Remember me',
+                                     widget=forms.CheckboxInput(attrs={'class': 'form-check form-check-inline '
+                                                                                'kottai'}))
 
     class Meta:
         model = User
