@@ -9,7 +9,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from core.models import Account
 from django.contrib.auth.models import User
 from .forms import LoginForm, SignUpForm
-from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from landing.utils import create_session
 from django.contrib.sessions.backends.db import SessionStore
 
@@ -36,49 +36,6 @@ def stylist(request, stylist_id):
     except Stylist.DoesNotExist:
         raise Http404("Stylist does not exist")
     return render(request, 'landing/stylist.html', {'stylist': stylist_obj})
-
-
-def signup(request):
-    """
-    :param request: singup
-    :return: form to signup for account
-    """
-    form = SignUpForm()
-    context = {
-
-        'form': form
-
-    }
-
-    return render(request, 'landing/signup.html', context)
-
-
-def newuser(request):
-    """
-    :param request: receive form data
-    :return: redirect to thank you page
-    """
-    try:
-        firstname = request.POST['firstname']
-        lastname = request.POST['lastname']
-        email = request.POST['email']
-        password = request.POST['password']
-        fullname = firstname + " " + lastname
-    except KeyError:
-        raise Http404("Please sign up")
-    else:
-        new_stylist = Stylist()
-        new_stylist.first_name = firstname
-        new_stylist.last_name = lastname
-        new_stylist.email = email
-        new_stylist.password = password
-        new_stylist.joined_date = datetime.now()
-        new_stylist.save()
-
-        new_account = Account.objects.create(account_holder=new_stylist)
-        new_account.save()
-
-        return HttpResponseRedirect(reverse('landing:thankyou', args=(fullname,)))
 
 
 def login(request):
@@ -135,20 +92,95 @@ def authentication(request):
     return render(request, 'landing/login.html', {'form': form})
 
 
+def signup(request):
+    """
+    :param request: singup
+    :return: form to signup for account
+    """
+    form = UserCreationForm()
+    form.fields['username'].widget.attrs['class'] = "form-control input-login"
+    form.fields['password1'].widget.attrs['class'] = "form-control input-login"
+    form.fields['password2'].widget.attrs['class'] = "form-control input-login"
+
+    context = {
+
+        'form': form
+
+    }
+
+    return render(request, 'landing/signup.html', context)
+
+
+def create_user(request):
+    """
+    :param request: receive form data
+    :return: redirect to thank you page
+    """
+    if request.method == 'POST':
+        form = UserCreationForm(data=request.POST)
+
+        if form.is_valid():
+            print("FORM VALIDATED")
+            form.save()
+            return HttpResponse("USER CREATED")
+            # username = form.cleaned_data['username']
+            # password = form.cleaned_data['password']
+            # user = authenticate(username=username, password=password)
+            #
+            # if user is not None:
+            #     print("Logged in: " + user.__str__())
+            #     auth_login(request, user)
+            #     #create_session(request, 10)
+            #     return HttpResponseRedirect(reverse('core:main'))
+            #
+            # else:
+            #     return HttpResponse("Invalid Username or Password")
+
+        else:
+            print("error: {}".format(form.errors))
+            print(form.errors.as_data())
+            print("FORM INVALID")
+            return render(request, 'landing/login.html', {'form': form})
+            #return HttpResponseRedirect(reverse('core:main'))
+
+
+    # try:
+    #     firstname = request.POST['firstname']
+    #     lastname = request.POST['lastname']
+    #     email = request.POST['email']
+    #     password = request.POST['password']
+    #     fullname = firstname + " " + lastname
+    # except KeyError:
+    #     raise Http404("Please sign up")
+    # else:
+    #     new_stylist = Stylist()
+    #     new_stylist.first_name = firstname
+    #     new_stylist.last_name = lastname
+    #     new_stylist.email = email
+    #     new_stylist.password = password
+    #     new_stylist.joined_date = datetime.now()
+    #     new_stylist.save()
+    #
+    #     new_account = Account.objects.create(account_holder=new_stylist)
+    #     new_account.save()
+    #
+    #     return HttpResponseRedirect(reverse('landing:thankyou', args=(fullname,)))
+
+
+def thank_you(request):
+    """
+    :param request: get full name of user who signed up
+    :return: thank you for signing up page
+    """
+    return render(request, 'landing/thankyou.html')
+
+
 def account(request, kottai):
     """
     :param request: get full name of user who signed up
     :return: thank you for signing up page
     """
     return render(request, 'landing/account.html', {'email': kottai})
-
-
-def thankyou(request):
-    """
-    :param request: get full name of user who signed up
-    :return: thank you for signing up page
-    """
-    return render(request, 'landing/thankyou.html')
 
 
 def about(request):
