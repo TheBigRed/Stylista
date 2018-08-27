@@ -8,12 +8,11 @@ urlpatterns = [
     # /landing/1 ''' displays name of stylist when putting in primary key '''
     path('<int:stylist_id>/', views.stylist, name='stylist'),
     # /landing/name ''' Displays name of all clients in database '''
-    path('name/', views.name, name='name'),
     path('signup/', views.signup, name='signup'),
     path('login/', views.login, name='login'),
     path('newuser/', views.newuser, name='newuser'),
-    path('thankyou/<fullname>/', views.thankyou, name='thankyou'),
-    path('authenticate/', views.authenticate, name='authenticate'),
+    path('thankyou/', views.thankyou, name='thankyou'),
+    path('authentication/', views.authentication, name='authentication'),
     path('account/<kottai>', views.account, name='account'),
     path('about/', views.about, name='about'),
 ]

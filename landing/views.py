@@ -1,5 +1,5 @@
 from django.http import HttpResponse, Http404, HttpResponseRedirect
-from django.contrib.auth import authenticate
+from django.contrib.auth import authenticate, login as auth_login
 from django.template import loader
 from django.shortcuts import render, redirect
 from .models import Stylist
@@ -9,6 +9,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from core.models import Account
 from django.contrib.auth.models import User
 from .forms import LoginForm, SignUpForm
+from django.contrib.auth.forms import AuthenticationForm
 from landing.utils import create_session
 from django.contrib.sessions.backends.db import SessionStore
 
@@ -52,21 +53,6 @@ def signup(request):
     return render(request, 'landing/signup.html', context)
 
 
-def login(request):
-    """
-    :param request: none
-    :return: about site page
-    """
-    form = LoginForm
-    context = {
-
-        'form': form
-
-    }
-
-    return render(request, 'landing/login.html', context)
-
-
 def newuser(request):
     """
     :param request: receive form data
@@ -95,38 +81,58 @@ def newuser(request):
         return HttpResponseRedirect(reverse('landing:thankyou', args=(fullname,)))
 
 
-def authenticate(request):
+def login(request):
+    """
+    :param request: none
+    :return: about site page
+    """
+    form = AuthenticationForm()
+    form.fields['username'].widget.attrs['class'] = "form-control input-login"
+    form.fields['password'].widget.attrs['class'] = "form-control input-login"
+
+    context = {
+
+        'form': form
+
+    }
+
+    return render(request, 'landing/login.html', context)
+
+
+def authentication(request):
     """
     :param request: receive form data login
     :return: redirect to page main page after login
     """
 
     if request.method == 'POST':
-        form = LoginForm(request.POST)
+        form = AuthenticationForm(data=request.POST)
+
         if form.is_valid():
-            create_session(request, 10)
-            return HttpResponseRedirect(reverse('core:main'))
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            user = authenticate(username=username, password=password)
 
-    else:
-        form = LoginForm
+            if user is not None:
+                print("Logged in: " + user.__str__())
+                auth_login(request, user)
+                #create_session(request, 10)
+                return HttpResponseRedirect(reverse('core:main'))
 
+            else:
+                return HttpResponse("Invalid Username or Password")
+
+        else:
+            print("error: {}".format(form.errors))
+            print(form.errors.as_data())
+            print("FORM INVALID")
+            form.fields['username'].widget.attrs['class'] = "form-control input-login"
+            form.fields['password'].widget.attrs['class'] = "form-control input-login"
+            return render(request, 'landing/login.html', {'form': form})
+            #return HttpResponseRedirect(reverse('core:main'))
+
+    form = AuthenticationForm()
     return render(request, 'landing/login.html', {'form': form})
-
-    # try:
-    #     email = request.POST['email']
-    #     password = request.POST['password']
-    #     stylista = Stylist.objects.get(email=email, password=password)
-    #     user_firstname = stylista.first_name
-    #     if stylista:
-    #         #return HttpResponseRedirect(reverse('landing:account', args=(stylista,)))
-    #         print("Authenticated : " + user_firstname)
-    #         create_session(request, stylista.pk)
-    #         return HttpResponseRedirect(reverse('core:main'))
-    #
-    # except ObjectDoesNotExist:
-    #     #return redirect('core:main')
-    #     #raise Http404("Please sign up")
-    #     return HttpResponse("Please SIGN UP")
 
 
 def account(request, kottai):

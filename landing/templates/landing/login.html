@@ -10,26 +10,12 @@
 <body>
     <section>
         <div class="container form-container py-4" style="margin-top: 200px;">
-            <div class="row justify-content-center p-5">
-                <h3 class="mb-4">LOGIN</h3>
+            <div id="form-row" class="row justify-content-center p-5">
                 <div class="col-12">
-                    <form action="{% url 'landing:authenticate' %}" method="post">
+                    <form action="{% url 'landing:authentication' %}" method="post">
                         {% csrf_token %}
-                        {% for field in form.visible_fields %}
-                            <div class="form-group">
-                                <div class="mx-auto">
-                                    {% if field.label != 'Remember me' %}
-                                        {{field.label_tag}}
-                                        {{field}}
-                                    {% endif %}
-                                </div>
-                            </div>
-                        {% endfor %}
-                        <div class="form-group mt-4">
-                            <label>{{form.remember_me.label}}</label>
-                            {{form.remember_me}}
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-login mt-1 p-3">LOGIN</button>
+                        {{form}}
+                        <button type="submit" class="btn btn-primary btn-login mt-4 p-3">LOGIN</button>
                         <div class="col-12 text-center">
                             <p class="mt-4" style="font-weight:500; color: #90A4AE;">Forgot your password? Click <a href="#" style="color: #4DB6AC;">Here</a> to reset it.</p>
                         </div>
@@ -44,7 +30,7 @@
 <!--
 <div class="row justify-content-center">
     <div class="col-lg-8 col-12 p-5 form-cards" style="background-color: #FFFFFF;">
-        <form action="{% url 'landing:authenticate' %}" method="post">
+        <form action="{% url 'landing:authentication' %}" method="post">
             {% csrf_token %}
             <div class="form-group">
                 <label for="login-email">Email address</label>
