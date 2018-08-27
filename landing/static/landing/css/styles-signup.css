@@ -38,7 +38,7 @@ label, p, input{
 
 }
 
-.input-signup[type="text"]{
+.input-signup{
 
     font-size: 1rem;
     line-height: 2;

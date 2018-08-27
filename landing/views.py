@@ -88,8 +88,7 @@ def authentication(request):
             return render(request, 'landing/login.html', {'form': form})
             #return HttpResponseRedirect(reverse('core:main'))
 
-    form = AuthenticationForm()
-    return render(request, 'landing/login.html', {'form': form})
+    return HttpResponseRedirect(reverse('landing:login'))
 
 
 def signup(request):
@@ -98,9 +97,9 @@ def signup(request):
     :return: form to signup for account
     """
     form = UserCreationForm()
-    form.fields['username'].widget.attrs['class'] = "form-control input-login"
-    form.fields['password1'].widget.attrs['class'] = "form-control input-login"
-    form.fields['password2'].widget.attrs['class'] = "form-control input-login"
+    form.fields['username'].widget.attrs['class'] = "form-control input-signup"
+    form.fields['password1'].widget.attrs['class'] = "form-control input-signup"
+    form.fields['password2'].widget.attrs['class'] = "form-control input-signup"
 
     context = {
 
@@ -140,9 +139,10 @@ def create_user(request):
             print("error: {}".format(form.errors))
             print(form.errors.as_data())
             print("FORM INVALID")
-            return render(request, 'landing/login.html', {'form': form})
+            return render(request, 'landing/signup.html', {'form': form})
             #return HttpResponseRedirect(reverse('core:main'))
 
+    return HttpResponseRedirect(reverse('landing:signup'))
 
     # try:
     #     firstname = request.POST['firstname']
