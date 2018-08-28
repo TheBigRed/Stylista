@@ -13,16 +13,16 @@ def main(request):
     :param request: get request which has user on db session stored in session cookie
     :return: main page with correct user after authenticate session
     '''
-    if request.session.keys():
-        s = get_dbsession(request.session['session_login'])
-        stylist = Stylist.objects.get(pk=s['user_pk'])
-        accounts = Account.objects.filter(stylist_type='BARBER')
+    if request.user.is_authenticated:
+        print("Authorizing access for: " + request.user.username)
+        context = {
 
-        print("Received cookie session: {}".format(request.session.session_key))
-        request.session.cycle_key()
-        #print("Main page received user session: {0}".format(user_session))
-        #print("New cookie session {0} with db session value {1}".format(request.session.session_key, request.session['session_login']))
-        return render(request, 'core/main.html', {'stylist': stylist, 'accounts': accounts})
+            'user': request.user
+
+        }
+
+        return render(request, 'core/main.html', context)
+
     else:
         return HttpResponseRedirect(reverse('landing:login'))
 

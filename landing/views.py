@@ -73,7 +73,6 @@ def authentication(request):
             if user is not None:
                 print("Logged in: " + user.__str__())
                 auth_login(request, user)
-                #create_session(request, 10)
                 return HttpResponseRedirect(reverse('core:main'))
 
             else:
