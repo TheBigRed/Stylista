@@ -127,6 +127,9 @@ def create_user(request):
             print("error: {}".format(form.errors))
             print(form.errors.as_data())
             print("FORM INVALID")
+            form.fields['username'].widget.attrs['class'] = "form-control input-signup"
+            form.fields['password1'].widget.attrs['class'] = "form-control input-signup"
+            form.fields['password2'].widget.attrs['class'] = "form-control input-signup"
             return render(request, 'landing/signup.html', {'form': form})
             #return HttpResponseRedirect(reverse('core:main'))
 
