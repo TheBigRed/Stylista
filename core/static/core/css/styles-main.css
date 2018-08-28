@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
-/*
-*{
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,500');
 
-    border: 1px solid red;
-
-}*/
 
 body{
 
@@ -25,6 +21,13 @@ a { color: inherit; }
 .bg-light{
 
     background-color: #4DB6AC !important;
+
+}
+
+.nav-container{
+
+    padding:0;
+    margin:0;
 
 }
 
@@ -67,15 +70,15 @@ a { color: inherit; }
     top: 135%;
     text-align: center;
     min-width: 14rem;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .search-input{
 
     border: 1px;
-    border-radius: 7px 7px 7px 7px;
-    -moz-border-radius: 7px 7px 7px 7px;
-    -webkit-border-radius: 7px 7px 7px 7px;
+    border-radius: 7px 7px 7px 7px !important;
+    -moz-border-radius: 7px 7px 7px 7px !important;
+    -webkit-border-radius: 7px 7px 7px 7px !important;
     box-shadow: 0 1px 1px 0 rgba(60,64,67,.08),0 1px 3px 1px rgba(60,64,67,.16);
 
 }
