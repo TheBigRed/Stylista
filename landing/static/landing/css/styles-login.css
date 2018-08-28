@@ -26,6 +26,12 @@ label, p, input{
 
 }
 
+label{
+
+    margin-bottom: 0;
+
+}
+
 .form-container{
 
     background-color: #FCFCFC;
@@ -40,6 +46,7 @@ label, p, input{
 .input-login{
 
     font-size: 1.25rem;
+    line-height: 2;
     margin: 1rem 0;
     /*box-shadow: 0 1px 1px 0 rgba(60,64,67,.08),0 1px 3px 1px rgba(60,64,67,.16);*/
 

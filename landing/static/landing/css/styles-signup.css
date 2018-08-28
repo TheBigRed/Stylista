@@ -26,6 +26,12 @@ label, p, input{
 
 }
 
+label{
+
+    margin-bottom: 0;
+
+}
+
 .form-container{
 
     background-color: #FCFCFC;
@@ -40,8 +46,9 @@ label, p, input{
 
 .input-signup{
 
-    font-size: 1rem;
+    font-size: 1.25rem;
     line-height: 2;
+    margin: 1rem 0;
 
 }
 
