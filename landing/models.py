@@ -1,3 +1,5 @@
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import RegexValidator
@@ -28,6 +30,13 @@ class Client(models.Model):
 
     def __str__(self):
         return self.user.first_name + self.user.last_name
+
+    @receiver(post_save, sender=User)
+    def create_client(sender, instance, **kwargs):
+        print("Received post_save signal from User")
+        if kwargs.get('created', False):
+            Client.objects.update_or_create(user=instance)
+            print("Client Created")
 
     class Meta:
         verbose_name = 'Client'

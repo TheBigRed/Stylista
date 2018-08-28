@@ -2,7 +2,7 @@ from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.contrib.auth import authenticate, login as auth_login
 from django.template import loader
 from django.shortcuts import render, redirect
-from .models import Stylist
+from .models import Stylist, Client
 from datetime import datetime
 from django.urls import reverse
 from django.core.exceptions import ObjectDoesNotExist
@@ -122,18 +122,6 @@ def create_user(request):
             print("FORM VALIDATED")
             form.save()
             return HttpResponse("USER CREATED")
-            # username = form.cleaned_data['username']
-            # password = form.cleaned_data['password']
-            # user = authenticate(username=username, password=password)
-            #
-            # if user is not None:
-            #     print("Logged in: " + user.__str__())
-            #     auth_login(request, user)
-            #     #create_session(request, 10)
-            #     return HttpResponseRedirect(reverse('core:main'))
-            #
-            # else:
-            #     return HttpResponse("Invalid Username or Password")
 
         else:
             print("error: {}".format(form.errors))
@@ -143,28 +131,6 @@ def create_user(request):
             #return HttpResponseRedirect(reverse('core:main'))
 
     return HttpResponseRedirect(reverse('landing:signup'))
-
-    # try:
-    #     firstname = request.POST['firstname']
-    #     lastname = request.POST['lastname']
-    #     email = request.POST['email']
-    #     password = request.POST['password']
-    #     fullname = firstname + " " + lastname
-    # except KeyError:
-    #     raise Http404("Please sign up")
-    # else:
-    #     new_stylist = Stylist()
-    #     new_stylist.first_name = firstname
-    #     new_stylist.last_name = lastname
-    #     new_stylist.email = email
-    #     new_stylist.password = password
-    #     new_stylist.joined_date = datetime.now()
-    #     new_stylist.save()
-    #
-    #     new_account = Account.objects.create(account_holder=new_stylist)
-    #     new_account.save()
-    #
-    #     return HttpResponseRedirect(reverse('landing:thankyou', args=(fullname,)))
 
 
 def thank_you(request):
