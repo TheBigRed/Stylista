@@ -5,6 +5,7 @@ from django.urls import reverse
 from django.views import View
 from landing.models import Stylist
 from core.models import Account
+from .forms import UploadStoreFrontForm
 
 
 def index(request):
@@ -68,4 +69,28 @@ def img_upload(request):
     # else:
     #     form = UploadFileForm()
     #     return render(request, 'core/upload_module.html', {'uploadform': form})
-    return render(request, 'usersettings/img_upload.html', {})
+    form = UploadStoreFrontForm()
+    context = {
+
+        'form': form
+
+    }
+
+    return render(request, 'usersettings/img_upload.html', context)
+
+
+def uploaded(request):
+
+    if request.method == 'POST':
+        form = UploadStoreFrontForm(data=request.POST)
+
+        if form.is_valid():
+            return HttpResponse("Form VALID")
+
+        else:
+            form
+            return HttpResponse("Form INVALID")
+
+        return HttpResponse("UPLOADED")
+
+    return HttpResponse("NOT UPLOADED")

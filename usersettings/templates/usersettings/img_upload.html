@@ -5,9 +5,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="{% static 'usersetting/css/styles-imgupload.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'usersettings/css/styles-imgupload.css' %}">
     </head>
 <body>
-IMG UPLOAD
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <form action="{% url 'usersettings:uploaded' %}" method="post">
+                {% csrf_token %}
+                {{ form }}
+                <button type="submit" class="btn btn-primary mt-4 py-3">UPLOAD</button>
+            </form>
+        </div>
+    </div>
+</div>
 </body>
 </html>
