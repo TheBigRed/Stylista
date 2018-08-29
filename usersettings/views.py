@@ -3,7 +3,7 @@ from django.shortcuts import render
 from landing.utils import get_dbsession
 from django.urls import reverse
 from django.views import View
-from landing.models import Stylist
+from landing.models import Stylist, Stylista
 from core.models import Account
 from .forms import UploadStoreFrontForm
 
@@ -83,18 +83,23 @@ def img_upload(request):
 def uploaded(request):
 
     if request.method == 'POST':
-        account = Account.objects.get(pk=20)
-        form = UploadStoreFrontForm(instance=account, data=request.POST, files=request.FILES)
+        stylista = Stylista.objects.get(pk=4)
+        form = UploadStoreFrontForm(instance=stylista, data=request.POST, files=request.FILES)
 
         if form.is_valid():
-            print("FORM VALIDATED")
-            form.save(commit=False)
-            file = request.FILES['store_front'].name
-            print("File Name: {}".format(file))
-            print("Account Holder: {}".format(form.instance.account_holder))
-            print("Account Store Front: {}".format(form.instance.store_front))
-            form.save()
-            return HttpResponse("Form VALID")
+
+            if len(request.FILES) != 0:
+                print("FORM VALIDATED")
+                form.save(commit=False)
+                file = request.FILES['store_front'].name
+                print("File Name: {}".format(file))
+                print("Account Holder: {}".format(form.instance.user))
+                print("Account Store Front: {}".format(form.instance.store_front))
+                form.save()
+                return HttpResponse("Form VALID")
+
+            else:
+                return HttpResponseRedirect(reverse("usersettings:img_upload"))
 
         else:
             print(form.errors)
