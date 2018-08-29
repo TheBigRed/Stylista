@@ -69,6 +69,7 @@ def img_upload(request):
     # else:
     #     form = UploadFileForm()
     #     return render(request, 'core/upload_module.html', {'uploadform': form})
+    account = Account.objects.get(pk=20)
     form = UploadStoreFrontForm()
     context = {
 
@@ -82,15 +83,24 @@ def img_upload(request):
 def uploaded(request):
 
     if request.method == 'POST':
-        form = UploadStoreFrontForm(data=request.POST)
+        account = Account.objects.get(pk=20)
+        form = UploadStoreFrontForm(instance=account, data=request.POST, files=request.FILES)
 
         if form.is_valid():
+            print("FORM VALIDATED")
+            form.save(commit=False)
+            file = request.FILES['store_front'].name
+            print("File Name: {}".format(file))
+            print("Account Holder: {}".format(form.instance.account_holder))
+            print("Account Store Front: {}".format(form.instance.store_front))
+            form.save()
             return HttpResponse("Form VALID")
 
         else:
-            form
+            print(form.errors)
             return HttpResponse("Form INVALID")
 
         return HttpResponse("UPLOADED")
 
-    return HttpResponse("NOT UPLOADED")
+    return HttpResponseRedirect(reverse("usersettings:img_upload"))
+
