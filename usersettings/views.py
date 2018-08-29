@@ -68,4 +68,4 @@ def img_upload(request):
     # else:
     #     form = UploadFileForm()
     #     return render(request, 'core/upload_module.html', {'uploadform': form})
-    return render(request, 'core/upload_module.html', {})
+    return render(request, 'usersettings/img_upload.html', {})
