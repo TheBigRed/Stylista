@@ -1,9 +1,8 @@
-from django.http import HttpResponse, Http404, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from django.shortcuts import render
-from core.models import Account, Gallery, Service
-from landing.models import Stylist
-from .forms import UploadFileForm
+from core.models import Account
+from landing.models import Stylista, Stylist
 from landing.utils import get_dbsession
 from django.urls import reverse
 
@@ -55,19 +54,7 @@ def searchrefined(request):
     return render(request, 'core/refined.html')
 
 
-def uploadmodule(request):
-    if request.method == 'POST':
-        form = UploadFileForm(request.POST, request.FILES)
-        if form.is_valid():
-            s = get_dbsession(request.session['session_login'])
-            edit_account = Account.objects.get(account_holder_id=int(s['user_pk']))
-            edit_account.store_front = form.cleaned_data['file']
-            edit_account.save()
-            return HttpResponse("Uploaded <filename>")
-    else:
-        form = UploadFileForm()
-        return render(request, 'core/upload_module.html', {'uploadform': form})
-    return render(request, 'core/upload_module.html', {})
+
 
 
 def stylistsearchmodule(request):
@@ -93,3 +80,20 @@ def profile(request, store_front):
 
     else:
         return HttpResponseRedirect(reverse('landing:login'))
+
+
+def test_bench(request):
+    stylista = Stylista.objects.get(pk=4)
+    stylista.change_service_value('BJ', '1000')
+    stylista.save()
+    # print(stylista.user)
+    # print(stylista.business_name)
+    # j = json.dumps(stylista.services, indent=4, sort_keys=True)
+    # loaded_j = json.loads(j)
+    # print("JSON: {}".format(j))
+    # loaded_j['BJ'] = '40'
+    # print("Changed JSON: {}".format(json.dumps(loaded_j, indent=4, sort_keys=True)))
+    # stylista.services = loaded_j
+    # stylista.save()
+
+    return HttpResponse("This is a test bench")

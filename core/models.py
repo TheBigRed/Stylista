@@ -1,6 +1,5 @@
 from django.db import models
 from landing.models import Stylist
-from core.forms import UploadFileForm
 
 
 class Account(models.Model):
