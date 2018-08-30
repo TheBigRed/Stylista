@@ -11,6 +11,6 @@ class UploadStoreFrontForm(ModelForm):
         fields = ('store_front',)
         widgets = {
 
-            'store_front': FileInput(attrs={'class': 'form-control input-signup'})
+            'store_front': FileInput(attrs={'class': 'form-control input-upload d-inline'})
 
         }

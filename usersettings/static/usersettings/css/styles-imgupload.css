@@ -3,3 +3,40 @@
     border: 1px solid red;
 
 }
+
+.upload-container{
+
+    width: 800px;
+
+}
+
+.file-input-label{
+
+    content: center;
+    width:100%;
+    border: 1px solid #4DB6AC;
+
+}
+
+.overlap{
+
+    font-size: 1.25rem;
+    color: #455A64;
+    display: inline-block;
+    overflow: hidden;
+
+}
+
+.input-upload{
+
+    display: none !important;
+    text-align: center;
+    z-index: 2;
+
+}
+
+.upload-btn{
+
+    width: 80%
+
+}

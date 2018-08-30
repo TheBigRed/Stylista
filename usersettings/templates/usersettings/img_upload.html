@@ -8,13 +8,23 @@
         <link rel="stylesheet" type="text/css" href="{% static 'usersettings/css/styles-imgupload.css' %}">
     </head>
 <body>
-<div class="container">
+<div class="container upload-container">
     <div class="row">
-        <div class="col">
-            <form action="{% url 'usersettings:uploaded' %}" method="post">
+        <div class="col-12 py-3" align="center">
+            <h3 class="mb-0">STORE FRONT PHOTO</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col py-2" align="center">
+            <form action="{% url 'usersettings:uploaded' %}" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
-                {{ form }}
-                <button type="submit" class="btn btn-primary mt-4 py-3">UPLOAD</button>
+                <div class="col content-center no-gutters py-2" align="center">
+                    <label class="file-input-label mb-0">
+                        <h3 class="d-inline">UPLOAD IMAGE HERE</h3>
+                        {{ form.store_front }}
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary upload-btn mt-4 py-3">UPLOAD</button>
             </form>
         </div>
     </div>

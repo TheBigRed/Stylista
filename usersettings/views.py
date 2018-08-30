@@ -105,7 +105,5 @@ def uploaded(request):
             print(form.errors)
             return HttpResponse("Form INVALID")
 
-        return HttpResponse("UPLOADED")
-
     return HttpResponseRedirect(reverse("usersettings:img_upload"))
 
