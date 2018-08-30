@@ -56,6 +56,12 @@ h1, h2, h3, h4, h5{
 
 }
 
+.file-input-label:hover{
+
+    cursor: pointer;
+
+}
+
 .overlap{
 
     font-size: 1.25rem;
