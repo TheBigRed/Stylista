@@ -71,15 +71,15 @@ def stylistsearchmodule(request):
 
 
 def profile(request, store_front):
-    if request.session.keys():
-        client_session = get_dbsession(request.session['session_login'])
-        stylist = Stylist.objects.get(pk=client_session['user_pk'])
+    #if request.session.keys():
+        #client_session = get_dbsession(request.session['session_login'])
+        stylist = Stylist.objects.get(pk=10)
         account = Account.objects.get(store_name=store_front)
         request.session.cycle_key()
         return render(request, 'core/profile.html', {'account': account})
 
-    else:
-        return HttpResponseRedirect(reverse('landing:login'))
+    #else:
+    #  return HttpResponseRedirect(reverse('landing:login'))
 
 
 def test_bench(request):
