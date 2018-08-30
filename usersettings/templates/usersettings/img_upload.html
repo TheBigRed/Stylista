@@ -8,26 +8,35 @@
         <link rel="stylesheet" type="text/css" href="{% static 'usersettings/css/styles-imgupload.css' %}">
     </head>
 <body>
-<div class="container upload-container">
-    <div class="row">
-        <div class="col-12 py-3" align="center">
-            <h3 class="mb-0">STORE FRONT PHOTO</h3>
+    <div class="container upload-container">
+        <div class="row">
+            <div class="col-12 py-3" align="center">
+                <h3 class="mb-0">STORE FRONT PHOTO</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col py-2" align="center">
+                <form action="{% url 'usersettings:uploaded' %}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="col content-center no-gutters py-2" align="center">
+                        <h5 id="filename">&emsp;</h5>
+                        <label class="file-input-label mb-0">
+                            <h3 class="d-inline">UPLOAD IMAGE HERE</h3>
+                            {{ form.store_front }}
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary upload-btn mt-4 py-3">UPLOAD</button>
+                    <br>
+                    <br>
+                </form>
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col py-2" align="center">
-            <form action="{% url 'usersettings:uploaded' %}" method="post" enctype="multipart/form-data">
-                {% csrf_token %}
-                <div class="col content-center no-gutters py-2" align="center">
-                    <label class="file-input-label mb-0">
-                        <h3 class="d-inline">UPLOAD IMAGE HERE</h3>
-                        {{ form.store_front }}
-                    </label>
-                </div>
-                <button type="submit" class="btn btn-primary upload-btn mt-4 py-3">UPLOAD</button>
-            </form>
-        </div>
-    </div>
-</div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="{% static 'usersettings/js/img-upload.js' %}"></script>
+
 </body>
 </html>

@@ -1,7 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+
+
 *{
 
     border: 1px solid red;
 
+}
+
+body{
+
+    background-color: #FAFAFA;
+
+}
+
+h1, h2, h3, h4, h5{
+
+    color: #37474F;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.font-roboto4{
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.font-roboto5{
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
 }
 
 .upload-container{
@@ -13,7 +41,7 @@
 .file-input-label{
 
     content: center;
-    width:100%;
+    width:80%;
     border: 1px solid #4DB6AC;
 
 }
@@ -37,6 +65,8 @@
 
 .upload-btn{
 
-    width: 80%
+    width: 80%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
 
 }
