@@ -8,24 +8,29 @@
         <link rel="stylesheet" type="text/css" href="{% static 'usersettings/css/styles-imgupload.css' %}">
     </head>
 <body>
-    <div class="container upload-container">
-        <div class="row">
+    <div class="container upload-container p-3" style="margin-top: 75px;">
+        <div class="row mx-0">
             <div class="col-12 py-3" align="center">
                 <h3 class="mb-0">STORE FRONT PHOTO</h3>
             </div>
         </div>
-        <div class="row">
-            <div class="col py-2" align="center">
+        <div class="row mx-0">
+            <div class="col-12 py-2">
+                <img class="img-fluid storefront-img" src="/media/user/storefront/barber-storefront.jpg" />
+            </div>
+            <div class="col-12 py-2" align="center">
+                <h5 id="filename" class="mb-0">&emsp;</h5>
+            </div>
+            <div class="col-12 py-2" align="center">
                 <form action="{% url 'usersettings:uploaded' %}" method="post" enctype="multipart/form-data">
                     {% csrf_token %}
-                    <div class="col content-center no-gutters py-2" align="center">
-                        <h5 id="filename">&emsp;</h5>
-                        <label class="file-input-label mb-0">
-                            <h3 class="d-inline">UPLOAD IMAGE HERE</h3>
+                    <div class="col content-center no-gutters px-0" align="center">
+                        <label class="file-input-label mb-0 py-2">
+                            <h4 class="d-inline font-roboto4">UPLOAD IMAGE HERE</h4>
                             {{ form.store_front }}
                         </label>
                     </div>
-                    <button type="submit" class="btn btn-primary upload-btn mt-4 py-3">UPLOAD</button>
+                    <button type="submit" class="btn btn-primary upload-btn mt-4 py-2">UPLOAD</button>
                     <br>
                     <br>
                 </form>

@@ -1,7 +1,7 @@
 
-addFileNameToLabel();
+getFileNameAndImg();
 
-function addFileNameToLabel() {
+function getFileNameAndImg() {
 
     $('.input-upload').click(function() {
 
@@ -10,8 +10,8 @@ function addFileNameToLabel() {
         $('.input-upload').change(function() {
 
             var filename = $('.input-upload').val();
+            getImg(this);
             $('#filename').text(filename);
-            alert(filename);
 
         });
 
@@ -21,3 +21,14 @@ function addFileNameToLabel() {
 }
 
 
+function getImg(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('.storefront-img').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
