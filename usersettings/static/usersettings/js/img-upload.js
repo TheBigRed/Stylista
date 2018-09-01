@@ -9,7 +9,10 @@ function getFileNameAndImg() {
 
         $('.input-upload').change(function() {
 
-            var filename = $('.input-upload').val();
+            var filepath = $('.input-upload').val();
+            var n = filepath.lastIndexOf("\\");
+            var filename = filepath.substring(n + 1);
+            console.log("FILE NAME: " + filename)
             getImg(this);
             $('#filename').text(filename);
 
@@ -20,8 +23,8 @@ function getFileNameAndImg() {
 
 }
 
-
 function getImg(input) {
+
     if (input.files && input.files[0]) {
         var reader = new FileReader();
 
