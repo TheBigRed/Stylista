@@ -9,21 +9,29 @@
     </head>
 <body>
 
-    <div class="container mt-5 popout-box">
-        <div class="row top-clip align-items-center">
-            <h4 class="ml-3">WELCOME TO USER SETTINGS PAGE</h4>
+    <div class="container mt-5 settings-container">
+        <div class="row align-items-center py-4">
+            <div class="col" align="center">
+                <h4 class="mb-0">WELCOME TO USER SETTINGS PAGE</h4>
+            </div>
         </div>
-        <div class="row justify-content-end">
-            <div class="col-4 d-none d-sm-block">
+        <div class="row py-4" style="background-color: #FFFFFF;">
+            <div class="col-4 d-none d-sm-block px-4">
                 <ul class="list-group list-group-flush mt-4">
-                    <li class="list-group-item active">EDIT PROFILE</li>
-                    <li class="list-group-item">REVIEWS</li>
-                    <li class="list-group-item">PHOTOS</li>
-                    <li class="list-group-item">PAYMENTS</li>
-                    <li class="list-group-item">ACCOUNT SETTINGS</li>
+                    <li class="list-group-item active py-4">EDIT PROFILE</li>
+                    <li class="list-group-item py-4">REVIEWS</li>
+                    <li class="list-group-item py-4">PHOTOS</li>
+                    <li class="list-group-item py-4">PAYMENTS</li>
+                    <li class="list-group-item py-4">ACCOUNT SETTINGS</li>
                 </ul>
             </div>
-            <div class="col-12 col-lg-8 pl-5 pr-5">
+            <div class="col-12 col-lg-8 px-5">
+                <div class="form-group" action="{% url 'usersettings:updateaccount' %}" method="post">
+                    {% csrf_token %}
+                    {{ form }}
+                    <br/>
+                    <button class="btn btn-primary btn-lg form-submit-btn" type="submit">SUBMIT</button>
+                </div><!--
                 <form id="setting-form" action="{% url 'usersettings:updateaccount' %}" method="post">
                     {% csrf_token %}
                     <div class="form-group">
@@ -54,7 +62,12 @@
                         <button class="btn btn-primary btn-lg primary-btns" type="submit">SUBMIT</button>
                     </div>
                 </form>
-            </div><!--
+            </div>
+            <div class="col">
+
+            </div>
+
+            <!--
             <div style="height:300px" class="col-12 col-lg-8 mt-3">
             </div>-->
         </div>

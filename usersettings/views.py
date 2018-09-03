@@ -5,11 +5,17 @@ from django.urls import reverse
 from django.views import View
 from landing.models import Stylist, Stylista
 from core.models import Account
-from .forms import UploadStoreFrontForm
+from .forms import UploadStoreFrontForm, UpdateClientInfo
 
 
 def index(request):
-    return render(request, 'usersettings/settings.html')
+    context = {
+
+        'form': UpdateClientInfo
+
+    }
+
+    return render(request, 'usersettings/settings.html', context)
     # if request.session.keys():
     #     s = get_dbsession(request.session['session_login'])
     #     stylist = Stylist.objects.get(pk=s['user_pk'])
