@@ -3,15 +3,17 @@ from django.shortcuts import render
 from landing.utils import get_dbsession
 from django.urls import reverse
 from django.views import View
-from landing.models import Stylist, Stylista
+from landing.models import Stylist, Stylista, Client
 from core.models import Account
 from .forms import UploadStoreFrontForm, UpdateClientInfo
 
 
 def index(request):
+    client = Client.objects.get(pk=2)
+    form = UpdateClientInfo(instance=client)
     context = {
 
-        'form': UpdateClientInfo
+        'form': form
 
     }
 
@@ -31,6 +33,26 @@ def updateaccount(request):
     :param request: get request which has user on db session stored in session cookie
     :return: main page with correct user after authenticate session
     '''
+    if request.method == 'POST':
+        client = Client.objects.get(pk=2)
+        form = UpdateClientInfo(instance=client, data=request.POST)
+
+        if form.is_valid():
+            #form.save(commit=False)
+            first_name = client.user.first_name
+            print("Client Name: {}".format(first_name))
+            # print("Account Holder: {}".format(form.instance.user))
+            # print("Account Store Front: {}".format(form.instance.store_front))
+            # form.save()
+            return HttpResponse("ACCOUNT UPDATED")
+
+        else:
+            print("error: {}".format(form.errors))
+            print(form.errors.as_data())
+            return render(request, 'usersettings/settings.html', {'form': form})
+            return HttpResponse("FORM INVALID")
+
+    return HttpResponseRedirect(reverse("usersettings:index"))
     # if request.session.keys():
     #     s = get_dbsession(request.session['session_login'])
     #     stylist = Stylist.objects.get(pk=s['user_pk'])

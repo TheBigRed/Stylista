@@ -19,10 +19,12 @@ class UploadStoreFrontForm(ModelForm):
 class UpdateClientInfo(ModelForm):
 
     first_name = forms.CharField(label='First Name',
-                                 widget=forms.TextInput(attrs={'class': 'form-control account-input'}))
+                                 widget=forms.TextInput(attrs={'class': 'form-control account-input'}),
+                                 required=False)
 
     last_name = forms.CharField(label='Last Name',
-                                widget=forms.TextInput(attrs={'class': 'form-control account-input'}))
+                                widget=forms.TextInput(attrs={'class': 'form-control account-input'}),
+                                required=False)
 
     class Meta:
         model = Stylista
