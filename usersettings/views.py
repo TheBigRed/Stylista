@@ -4,13 +4,21 @@ from landing.utils import get_dbsession
 from django.urls import reverse
 from django.views import View
 from landing.models import Stylist, Stylista, Client
+from django.contrib.auth.models import User
 from core.models import Account
-from .forms import UploadStoreFrontForm, UpdateClientInfo
+from django.forms import inlineformset_factory, modelformset_factory
+from .forms import UploadStoreFrontForm, UpdateClientInfo, BaseUserForm
 
 
 def index(request):
     client = Client.objects.get(pk=2)
-    form = UpdateClientInfo(instance=client)
+    user = client.user
+    print("USER FNAME: {}".format(user.first_name))
+    form = UpdateClientInfo(instance=client, initial={'first_name': user.first_name,
+                                                      'last_name': user.last_name})
+
+    #form.order_fields(form, form.field_order)
+
     context = {
 
         'form': form
@@ -38,12 +46,12 @@ def updateaccount(request):
         form = UpdateClientInfo(instance=client, data=request.POST)
 
         if form.is_valid():
-            #form.save(commit=False)
-            first_name = client.user.first_name
-            print("Client Name: {}".format(first_name))
-            # print("Account Holder: {}".format(form.instance.user))
-            # print("Account Store Front: {}".format(form.instance.store_front))
-            # form.save()
+            form.save(commit=False)
+            print("Update Account Form Client Name {}".format(form.instance.user))
+            client.user.first_name = form.cleaned_data['first_name']
+            client.user.last_name = form.cleaned_data['last_name']
+            client.user.save()
+            form.save()
             return HttpResponse("ACCOUNT UPDATED")
 
         else:
@@ -135,3 +143,20 @@ def uploaded(request):
 
     return HttpResponseRedirect(reverse("usersettings:img_upload"))
 
+
+'''HOW TO IMPLEMENT MODEL INLINE FORMSET'''
+# user_formset = modelformset_factory(User, form=BaseUserForm,
+#                                     fields=('first_name', 'last_name',),
+#                                     max_num=1, extra=1)
+#
+# client_formset = inlineformset_factory(User, Client,
+#                                        fields='__all__',
+#                                        extra=1, formset=user_formset, exclude=None,
+#                                        can_delete=False, max_num=1)
+#
+# context = {
+#
+#     #'form': form,
+#     'formset': client_formset
+#
+# }
