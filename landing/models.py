@@ -4,7 +4,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import RegexValidator
 from django.contrib.postgres.fields import JSONField
-import uuid
+import uuid, json
 
 
 class Stylist(models.Model):
@@ -33,10 +33,14 @@ class Client(models.Model):
 
     @receiver(post_save, sender=User)
     def create_client(sender, instance, **kwargs):
-        print("Received post_save signal from User")
+        print("Received post_save signal from User to create Stylista")
+
         if kwargs.get('created', False):
             Client.objects.update_or_create(user=instance)
             print("Client Created")
+
+        else:
+            print("Stylista not created")
 
     class Meta:
         verbose_name = 'Client'
@@ -77,12 +81,19 @@ class Stylista(models.Model):
     def user_directory_path(self, store_front):
         # file will be uploaded to MEDIA_ROOT/user_<id>/<filename>
         #print("Saved user " + self.account_holder + " AND " + self.acount_holder_id)
-        return 'user_{0}/storefront/{1}'.format(self.account_holder_id, self.store_front.__str__())
+        print("Storing at user_{0}/storefront/{1}".format(self.user_id, self.store_front.__str__()))
+        return 'user_{0}/storefront/{1}'.format(self.user_id, self.store_front.__str__())
 
     store_front = models.ImageField(upload_to=user_directory_path, default='/user/storefront/default-storefront.jpg')
 
     def __str__(self):
         return self.user.first_name + self.user.last_name
+
+    def change_service_value(self, service_name, service_price):
+        j = json.dumps(self.services, indent=4, sort_keys=True)
+        loaded_j = json.loads(j)
+        loaded_j[service_name] = service_price
+        self.services = loaded_j
 
     class Meta:
         verbose_name = 'Stylista'
