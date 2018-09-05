@@ -1,6 +1,28 @@
 from django import forms
-from django.forms import ModelForm, TextInput, FileInput
+from django.forms import ModelForm, TextInput, FileInput, BaseInlineFormSet
 from .models import Stylista
+from django.forms.models import modelformset_factory, inlineformset_factory
+from landing.models import Client, Stylist
+from django.contrib.auth.models import User as AccountUser
+
+
+class BaseUserForm(ModelForm):
+
+    class Meta:
+        model = AccountUser
+        fields = ('first_name', 'last_name')
+        widgets = {
+
+                    'first_name': TextInput(attrs={'class': 'form-control account-input'}),
+                    'last_name': TextInput(attrs={'class': 'form-control account-input'})
+        }
+
+
+class BaseClientForm(ModelForm):
+
+    class Meta:
+        model = Client
+        fields = '__all__'
 
 
 class UploadStoreFrontForm(ModelForm):
@@ -29,7 +51,7 @@ class UpdateClientInfo(ModelForm):
     class Meta:
         model = Stylista
         fields = ('address', 'zip_code', 'city', 'country', 'phone_number')
-        field_order = ['first_name', 'last_name', 'address', 'zip_code', 'city', 'country', 'phone_number']
+        field_order = ['zip_code', 'address', 'city', 'first_name', 'last_name', 'country', 'phone_number']
         widgets = {
 
                     'address': TextInput(attrs={'class': 'form-control account-input'}),
