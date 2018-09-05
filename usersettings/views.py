@@ -3,22 +3,23 @@ from django.shortcuts import render
 from landing.utils import get_dbsession
 from django.urls import reverse
 from django.views import View
-from landing.models import Stylist, Stylista, Client
-from django.contrib.auth.models import User
+from landing.models import Stylista, Client
 from core.models import Account
-from django.forms import inlineformset_factory, modelformset_factory
-from .forms import UploadStoreFrontForm, UpdateClientInfo, BaseUserForm
+from .forms import UploadStoreFrontForm, UpdateClientInfo
 
 
 def index(request):
     client = Client.objects.get(pk=2)
     user = client.user
-    print("USER FNAME: {}".format(user.first_name))
+    print("USER: {}".format(user))
+
     form = UpdateClientInfo(instance=client, initial={'first_name': user.first_name,
                                                       'last_name': user.last_name})
 
-    #form.order_fields(form, form.field_order)
+    field_order = ['first_name', 'last_name', 'address', 'city', 'zip_code',
+                   'country', 'phone_number']
 
+    form.order_fields(field_order)
     context = {
 
         'form': form

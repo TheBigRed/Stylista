@@ -1,25 +1,19 @@
-$(document).ready(function() {
+
+listGroup();
+
+function listGroup(){
+
+    $('#formset-container').html($('#profile-form').html());
 
     $('.list-group li').click(function(e) {
+
         e.preventDefault()
+        $('.list-group').find('li').removeClass('list-item-active');
+        $(this).addClass('list-item-active');
+        var id = $(this).attr('id');
+        var html = $('#'+id+"-form").html();
+        $('#formset-container').html(html);
 
-        //$that = $(this);
-
-        $('.list-group').find('li').removeClass('active');
-        $(this).addClass('active');
-        $('#setting-form').addClass('d-none')
     });
 
-    //loadInputValues();
-
-});
-
-
-//Iterate over all input fields in form and put placeholder value as input value
-function loadInputValues() {
-
-    $('#setting-form *').filter(':input').each(function(){
-        var ph = $(this).attr('placeholder');
-        $(this).val(ph);
-    });
 }
