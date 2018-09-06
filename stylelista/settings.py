@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'usersettings.apps.UsersettingsConfig',
     'booking.apps.BookingConfig',
     'reviews.apps.ReviewsConfig',
+    'messages.apps.MessagesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
