@@ -14,10 +14,10 @@ class Message(models.Model):
     conversation = models.ForeignKey(Conversation, on_delete=models.CASCADE)
     sender = models.ForeignKey(User, on_delete=models.CASCADE)
     message = models.TextField(max_length=500, blank=True )
-    sent_date = models.DateTimeField(null=True, blank=True)
+    sent_date = models.DateTimeField(auto_now=True, null=True, blank=True)
 
     def __str__(self):
         return self.conversation.__str__()
 
-    def sender(self):
-        return self.sender.__str__()
+    def timestamp(self):
+        return self.sent_date
