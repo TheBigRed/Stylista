@@ -3,7 +3,7 @@ from .models import Message, Conversation
 
 
 class MessagesAdmin(admin.ModelAdmin):
-    list_display = ('sender', 'message')
+    list_display = ('conversation', 'sender', 'message')
 
 
 class ConversationAdmin(admin.ModelAdmin):
