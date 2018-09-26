@@ -7,7 +7,7 @@ class MessagesAdmin(admin.ModelAdmin):
 
 
 class ConversationAdmin(admin.ModelAdmin):
-    list_display = ('pk', 'sender', 'recipient')
+    list_display = ('pk', 'sender', 'recipient', 'conversation_date')
 
 
 admin.site.register(Message, MessagesAdmin)
