@@ -8,7 +8,11 @@ from django.contrib.auth.models import User
 
 def messages(request):
     messagess = Message.objects.all()
-    for m in messagess:
-        print(m.sent_date)
 
-    return HttpResponse("Messaging App")
+    context = {}
+
+    for m in messagess:
+        print(m.sender)
+        print(m.message)
+
+    return render(request, 'chat/messages.html', context)
