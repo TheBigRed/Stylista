@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,500');
+
+
+body{
+
+    background-color: #FAFAFA;
+
+}
+
+h1, h2, h3, h4, h5{
+
+    color: #37474F;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+p{
+
+    margin: 0;
+
+}
+
+.chat-container{
+
+    overflow: hidden;
+    margin-top: 75px;
+    margin-bottom: 50px;
+    width: 700px;
+    background-color: #4DB6AC;
+    border-radius: 7px 7px 7px 7px;
+    -moz-border-radius: 7px 7px 7px 7px;
+    -webkit-border-radius: 7px 7px 7px 7px;
+    box-shadow: 0 1px 1px 0 rgba(60,64,67,.08),0 1px 3px 1px rgba(60,64,67,.16);
+
+}
+
+.main-header{
+
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: .5rem;
+
+}
+
+.msg-send{
+	background: #B2DFDB;
+    border-radius: 7px 0px 7px 7px;
+    -moz-border-radius: 7px 0px 7px 7px;
+    -webkit-border-radius: 7px 0px 7px 7px;
+}
+.msg-receive{
+	background: #FAFAFA;
+    border-radius: 0px 7px 7px 7px;
+    -moz-border-radius: 0px 7px 7px 7px;
+    -webkit-border-radius: 0px 7px 7px 7px;
+}
+
+.msg-send, .msg-receive{
+
+    padding: 0.75rem 0.75rem;
+
+    /*box-shadow: 0 1px 1px 0 rgba(60,64,67,.08),0 1px 3px 1px rgba(60,64,67,.16);*/
+
+}
+
+.msg-send:before{
+
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 17px;
+    width: 0;
+    height: 0;
+    border: 18px solid transparent;
+    border-left-color: #B2DFDB;
+    border-right: 0;
+    margin-top: -17.5px;
+    margin-right: -18px;
+
+}
+
+.msg-receive:after{
+
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 17px;
+    width: 0;
+    height: 0;
+    border: 18px solid transparent;
+    border-right-color: #FAFAFA;
+    border-left: 0;
+    margin-top: -17.5px;
+    margin-left: -18px;
+
+}
+.msg-receive:hover, .msg-send:hover{
+	opacity: 0.75;
+}
+
+.msg-date{
+
+    font-weight: 500;
+    color: #90A4AE;
+
+}
+
+
+
+.chatbox{
+
+    background-color: #FFFFFF;
+
+}

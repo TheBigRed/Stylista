@@ -9,7 +9,11 @@ from django.contrib.auth.models import User
 def messages(request):
     messagess = Message.objects.all()
 
-    context = {}
+    context = {
+
+        'messages': messagess
+
+    }
 
     for m in messagess:
         print(m.sender)
