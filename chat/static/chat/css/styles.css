@@ -111,3 +111,26 @@ p{
     background-color: #FFFFFF;
 
 }
+
+.textarea-btm{
+
+    background-color: #E0F2F1;
+
+}
+
+.btn-send{
+
+    width: 9rem;
+    padding: 0.75rem !important;
+    background-color: #80CBC4;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #37474F;
+    font-size: 1rem;
+    border-radius: 7px 7px 7px 7px;
+    -moz-border-radius: 7px 7px 7px 7px;
+    -webkit-border-radius: 7px 7px 7px 7px;
+    box-shadow: 0 1px 1px 0 rgba(60,64,67,.08),0 1px 3px 1px rgba(60,64,67,.16);
+    border-color: transparent;
+
+}
